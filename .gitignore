@@ -1,0 +1,32 @@
+# .NET
+src/**/bin/
+src/**/obj/
+*.user
+*.suo
+.vs/
+
+# Node / Angular
+frontend/node_modules/
+frontend/.angular/
+
+# Distribution / publish output
+dist/
+
+# Database files (created at runtime)
+**/*.db
+**/*.db-shm
+**/*.db-wal
+
+# Logs
+*.log
+
+# Environment / secrets
+appsettings.Development.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

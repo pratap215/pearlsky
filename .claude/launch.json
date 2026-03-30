@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "EmptyLegs API (.NET 9)",
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": ["run", "--project", "src/EmptyLegs.API/EmptyLegs.API.csproj", "--urls", "http://localhost:5000"],
+      "port": 5000
+    },
+    {
+      "name": "Angular Dev Server (ng serve)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "start", "--prefix", "frontend"],
+      "port": 4200
+    },
+    {
+      "name": "Angular Build Watch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "watch", "--prefix", "frontend"],
+      "port": 0
+    }
+  ]
+}

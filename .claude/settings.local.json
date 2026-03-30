@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Bash(\"E:/Pratap/personal/EmptyLegs_ClaudeCode/seed-data/coupons.json\":*)",
+      "Bash(python3 -c \":*)",
+      "Bash(node -e \":*)",
+      "Bash(find E:/Pratap/personal/EmptyLegs_ClaudeCode/frontend/src/app/features -name *.ts)",
+      "Bash(find E:/Pratap/personal/EmptyLegs_ClaudeCode/frontend/src/app/features -name *.ts -o -name *.html -o -name *.scss)",
+      "Bash(ng build:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(taskkill //F //IM \"EmptyLegs.API.exe\")",
+      "Bash(pkill -f \"dotnet.*EmptyLegs\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP_%{http_code}\" http://localhost:4200)",
+      "Bash(curl -s \"http://localhost:4200/api/operator/jets\" -H \"Authorization: Bearer invalid\" -w \"\\\\nHTTP_%{http_code}\")",
+      "Bash(curl -s -w \"HTTP_%{http_code}\" http://localhost:5000/api/auth/login -X POST -H \"Content-Type: application/json\" -d '{\"\"\"\"email\"\"\"\":\"\"\"\"aditya@example.com\"\"\"\",\"\"\"\"password\"\"\"\":\"\"\"\"User@123\"\"\"\"}' -o /dev/null)"
+    ]
+  }
+}
