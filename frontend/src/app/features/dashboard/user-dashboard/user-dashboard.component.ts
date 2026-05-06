@@ -62,7 +62,7 @@ import {
             </div>
             <div class="stat-card">
               <mat-icon class="stat-icon">account_balance_wallet</mat-icon>
-              <div class="stat-value">₹{{profile?.credits | number:'1.0-0'}}</div>
+              <div class="stat-value">\${{profile?.credits | number:'1.0-0'}}</div>
               <div class="stat-label">Credits Balance</div>
             </div>
             <div class="stat-card">
@@ -91,7 +91,7 @@ import {
                   <ng-container matColumnDef="date"><th mat-header-cell *matHeaderCellDef>Date</th><td mat-cell *matCellDef="let b">{{b.departureUtc | date:'MMM d, y'}}</td></ng-container>
                   <ng-container matColumnDef="aircraft"><th mat-header-cell *matHeaderCellDef>Aircraft</th><td mat-cell *matCellDef="let b">{{b.jetModel}}</td></ng-container>
                   <ng-container matColumnDef="status"><th mat-header-cell *matHeaderCellDef>Status</th><td mat-cell *matCellDef="let b"><span class="status-badge" [ngClass]="'status-' + b.status.toLowerCase()">{{b.status}}</span></td></ng-container>
-                  <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">₹{{b.totalAmount | number:'1.0-0'}}</td></ng-container>
+                  <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">\${{b.totalAmount | number:'1.0-0'}}</td></ng-container>
                   <ng-container matColumnDef="detail"><th mat-header-cell *matHeaderCellDef></th><td mat-cell *matCellDef="let b"><button mat-icon-button color="primary" (click)="viewBooking(b)" title="View Details"><mat-icon>visibility</mat-icon></button></td></ng-container>
                   <tr mat-header-row *matHeaderRowDef="bookingColumns"></tr>
                   <tr mat-row *matRowDef="let row; columns: bookingColumns;"></tr>
@@ -106,7 +106,7 @@ import {
                   <ng-container matColumnDef="date"><th mat-header-cell *matHeaderCellDef>Date</th><td mat-cell *matCellDef="let b">{{b.departureUtc | date:'MMM d, y'}}</td></ng-container>
                   <ng-container matColumnDef="aircraft"><th mat-header-cell *matHeaderCellDef>Aircraft</th><td mat-cell *matCellDef="let b">{{b.jetModel}}</td></ng-container>
                   <ng-container matColumnDef="status"><th mat-header-cell *matHeaderCellDef>Status</th><td mat-cell *matCellDef="let b"><span class="status-badge" [ngClass]="'status-' + b.status.toLowerCase()">{{b.status}}</span></td></ng-container>
-                  <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">₹{{b.totalAmount | number:'1.0-0'}}</td></ng-container>
+                  <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">\${{b.totalAmount | number:'1.0-0'}}</td></ng-container>
                   <ng-container matColumnDef="detail"><th mat-header-cell *matHeaderCellDef></th><td mat-cell *matCellDef="let b"><button mat-icon-button color="primary" (click)="viewBooking(b)" title="View Details"><mat-icon>visibility</mat-icon></button></td></ng-container>
                   <tr mat-header-row *matHeaderRowDef="bookingColumns"></tr>
                   <tr mat-row *matRowDef="let row; columns: bookingColumns;"></tr>
@@ -127,10 +127,8 @@ import {
               <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:14px"><span style="font-weight:600;color:#555">Departure</span><span>{{selectedBooking.departureUtc | date:'MMM d, y, h:mm a'}}</span></div>
               <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:14px"><span style="font-weight:600;color:#555">Operator</span><span>{{selectedBooking.operatorName}}</span></div>
               <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:14px"><span style="font-weight:600;color:#555">Status</span><span class="status-badge" [ngClass]="'status-' + selectedBooking.status.toLowerCase()">{{selectedBooking.status}}</span></div>
-              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:14px"><span style="font-weight:600;color:#555">Base Fare</span><span>₹{{selectedBooking.baseAmount | number:'1.0-0'}}</span></div>
-              <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:14px"><span style="font-weight:600;color:#555">Tax (18% GST)</span><span>₹{{selectedBooking.taxAmount | number:'1.0-0'}}</span></div>
-              <div *ngIf="selectedBooking.discountAmount > 0" style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:14px;color:#2e7d32"><span style="font-weight:600">Discount</span><span>-₹{{selectedBooking.discountAmount | number:'1.0-0'}}</span></div>
-              <div style="display:flex;justify-content:space-between;padding:12px 0;font-size:16px;font-weight:700;color:#1B2A5C;border-top:2px solid #e0e0e0"><span>Total Paid</span><span>₹{{selectedBooking.totalAmount | number:'1.0-0'}}</span></div>
+              <div *ngIf="selectedBooking.discountAmount > 0" style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:14px;color:#2e7d32"><span style="font-weight:600">Discount</span><span>-\${{selectedBooking.discountAmount | number:'1.0-0'}}</span></div>
+              <div style="display:flex;justify-content:space-between;padding:12px 0;font-size:16px;font-weight:700;color:#1B2A5C;border-top:2px solid #e0e0e0"><span>Total Paid</span><span>\${{selectedBooking.totalAmount | number:'1.0-0'}}</span></div>
             </div>
             <div *ngIf="selectedBooking.passengers?.length" style="margin-top:16px">
               <h4 style="color:#1B2A5C;margin-bottom:8px;font-size:14px;font-weight:600">Passengers ({{selectedBooking.passengerCount}})</h4>
@@ -155,7 +153,7 @@ import {
               <mat-card-content>
                 <div class="fav-route">{{f.originCode}} → {{f.destinationCode}}</div>
                 <div class="fav-cities">{{f.origin}} → {{f.destination}}</div>
-                <div class="fav-meta">{{f.departureUtc | date:'MMM d, y'}} • ₹{{f.price | number:'1.0-0'}}</div>
+                <div class="fav-meta">{{f.departureUtc | date:'MMM d, y'}} • \${{f.price | number:'1.0-0'}}</div>
               </mat-card-content>
               <mat-card-actions>
                 <button mat-button color="warn" (click)="removeFav(f)"><mat-icon>favorite</mat-icon> Remove</button>
@@ -209,13 +207,13 @@ import {
             <div class="stats-grid" style="margin-top:20px">
               <div class="stat-card"><div class="stat-value">{{referrals.totalReferrals}}</div><div class="stat-label">Total Referrals</div></div>
               <div class="stat-card"><div class="stat-value">{{referrals.convertedReferrals}}</div><div class="stat-label">Converted</div></div>
-              <div class="stat-card"><div class="stat-value">₹{{referrals.creditsEarned | number:'1.0-0'}}</div><div class="stat-label">Credits Earned</div></div>
+              <div class="stat-card"><div class="stat-value">\${{referrals.creditsEarned | number:'1.0-0'}}</div><div class="stat-label">Credits Earned</div></div>
             </div>
             <div class="mat-table-container" style="margin-top:20px">
               <table mat-table [dataSource]="referrals.referrals">
                 <ng-container matColumnDef="code"><th mat-header-cell *matHeaderCellDef>Code</th><td mat-cell *matCellDef="let r">{{r.referralCode}}</td></ng-container>
                 <ng-container matColumnDef="status"><th mat-header-cell *matHeaderCellDef>Status</th><td mat-cell *matCellDef="let r"><span [class]="r.isConverted ? 'status-confirmed status-badge' : 'status-pending status-badge'">{{r.isConverted ? 'Converted' : 'Pending'}}</span></td></ng-container>
-                <ng-container matColumnDef="credits"><th mat-header-cell *matHeaderCellDef>Credits</th><td mat-cell *matCellDef="let r">₹{{r.creditsAwarded | number:'1.0-0'}}</td></ng-container>
+                <ng-container matColumnDef="credits"><th mat-header-cell *matHeaderCellDef>Credits</th><td mat-cell *matCellDef="let r">\${{r.creditsAwarded | number:'1.0-0'}}</td></ng-container>
                 <ng-container matColumnDef="date"><th mat-header-cell *matHeaderCellDef>Date</th><td mat-cell *matCellDef="let r">{{r.createdAt | date:'MMM d, y'}}</td></ng-container>
                 <tr mat-header-row *matHeaderRowDef="referralColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: referralColumns;"></tr>
@@ -231,7 +229,7 @@ import {
             <mat-card class="credit-balance-card">
               <mat-card-content>
                 <div class="balance-label">Available Balance</div>
-                <div class="balance-amount">₹{{credits.totalCredits | number:'1.0-0'}}</div>
+                <div class="balance-amount">\${{credits.totalCredits | number:'1.0-0'}}</div>
                 <div class="balance-hint">Earn credits by referring friends or completing bookings</div>
               </mat-card-content>
             </mat-card>
@@ -241,8 +239,8 @@ import {
                 <ng-container matColumnDef="date"><th mat-header-cell *matHeaderCellDef>Date</th><td mat-cell *matCellDef="let t">{{t.createdAt | date:'MMM d, y'}}</td></ng-container>
                 <ng-container matColumnDef="desc"><th mat-header-cell *matHeaderCellDef>Description</th><td mat-cell *matCellDef="let t">{{t.description}}</td></ng-container>
                 <ng-container matColumnDef="type"><th mat-header-cell *matHeaderCellDef>Type</th><td mat-cell *matCellDef="let t"><span class="status-badge" [ngClass]="t.transactionType === 'Credit' ? 'status-confirmed' : 'status-blocked'">{{t.transactionType}}</span></td></ng-container>
-                <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let t" [class.credit-pos]="t.amount > 0" [class.credit-neg]="t.amount < 0">{{t.amount > 0 ? '+' : ''}}₹{{t.amount | number:'1.0-0'}}</td></ng-container>
-                <ng-container matColumnDef="balance"><th mat-header-cell *matHeaderCellDef>Balance</th><td mat-cell *matCellDef="let t">₹{{t.balanceAfter | number:'1.0-0'}}</td></ng-container>
+                <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let t" [class.credit-pos]="t.amount > 0" [class.credit-neg]="t.amount < 0">{{t.amount > 0 ? '+' : ''}}\${{t.amount | number:'1.0-0'}}</td></ng-container>
+                <ng-container matColumnDef="balance"><th mat-header-cell *matHeaderCellDef>Balance</th><td mat-cell *matCellDef="let t">\${{t.balanceAfter | number:'1.0-0'}}</td></ng-container>
                 <tr mat-header-row *matHeaderRowDef="creditColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: creditColumns;"></tr>
               </table>
@@ -481,9 +479,9 @@ export class UserDashboardComponent implements OnInit {
   getRelativeTime(dateStr: string): string {
     const diff = Date.now() - new Date(dateStr).getTime();
     const mins = Math.floor(diff / 60000);
-    if (mins < 60) return `${mins}m ago`;
+    if (mins < 60) return `\${mins}m ago`;
     const hrs = Math.floor(mins / 60);
-    if (hrs < 24) return `${hrs}h ago`;
-    return `${Math.floor(hrs / 24)}d ago`;
+    if (hrs < 24) return `\${hrs}h ago`;
+    return `\${Math.floor(hrs / 24)}d ago`;
   }
 }

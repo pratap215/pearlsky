@@ -125,17 +125,9 @@ import { EmptyLegDetailDto } from '../../../core/models/models';
               <mat-divider style="margin: 16px 0"></mat-divider>
               <!-- Price -->
               <div class="price-section">
-                <div class="price-row2">
-                  <span>Base Price</span>
-                  <span>₹{{flight.price | number:'1.0-0'}}</span>
-                </div>
-                <div class="price-row2">
-                  <span>GST (18%)</span>
-                  <span>₹{{flight.taxAmount | number:'1.0-0'}}</span>
-                </div>
                 <div class="price-row2 total">
                   <span>Total</span>
-                  <span>₹{{flight.totalPrice | number:'1.0-0'}}</span>
+                  <span>\${{flight.totalPrice | number:'1.0-0'}}</span>
                 </div>
               </div>
               <div class="book-seats">
@@ -332,7 +324,7 @@ export class FlightDetailComponent implements OnInit {
   getDuration(minutes: number): string {
     const h = Math.floor(minutes / 60);
     const m = minutes % 60;
-    return `${h}h ${m}m`;
+    return `\${h}h \${m}m`;
   }
 
   onImgError(event: Event): void {

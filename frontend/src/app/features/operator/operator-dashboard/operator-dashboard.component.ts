@@ -73,7 +73,7 @@ import { JetDto, EmptyLegDto, BookingDto, OperatorDashboardDto, CreateJetRequest
             </div>
             <div class="stat-card">
               <mat-icon class="stat-icon">payments</mat-icon>
-              <div class="stat-value">₹{{(dashboard.totalRevenue || 0) | number:'1.0-0'}}</div>
+              <div class="stat-value">\${{(dashboard.totalRevenue || 0) | number:'1.0-0'}}</div>
               <div class="stat-label">Revenue</div>
             </div>
           </div>
@@ -86,7 +86,7 @@ import { JetDto, EmptyLegDto, BookingDto, OperatorDashboardDto, CreateJetRequest
                 <ng-container matColumnDef="route"><th mat-header-cell *matHeaderCellDef>Route</th><td mat-cell *matCellDef="let b">{{b.origin}} → {{b.destination}}</td></ng-container>
                 <ng-container matColumnDef="date"><th mat-header-cell *matHeaderCellDef>Date</th><td mat-cell *matCellDef="let b">{{b.departureUtc | date:'MMM d'}}</td></ng-container>
                 <ng-container matColumnDef="status"><th mat-header-cell *matHeaderCellDef>Status</th><td mat-cell *matCellDef="let b"><span class="status-badge" [ngClass]="'status-' + b.status.toLowerCase()">{{b.status}}</span></td></ng-container>
-                <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">₹{{b.totalAmount | number:'1.0-0'}}</td></ng-container>
+                <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">\${{b.totalAmount | number:'1.0-0'}}</td></ng-container>
                 <tr mat-header-row *matHeaderRowDef="['ref','route','date','status','amount']"></tr>
                 <tr mat-row *matRowDef="let row; columns: ['ref','route','date','status','amount'];"></tr>
               </table>
@@ -178,7 +178,7 @@ import { JetDto, EmptyLegDto, BookingDto, OperatorDashboardDto, CreateJetRequest
               </ng-container>
               <ng-container matColumnDef="price">
                 <th mat-header-cell *matHeaderCellDef>Price</th>
-                <td mat-cell *matCellDef="let l">₹{{l.price | number:'1.0-0'}}</td>
+                <td mat-cell *matCellDef="let l">\${{l.price | number:'1.0-0'}}</td>
               </ng-container>
               <ng-container matColumnDef="status">
                 <th mat-header-cell *matHeaderCellDef>Status</th>
@@ -215,7 +215,7 @@ import { JetDto, EmptyLegDto, BookingDto, OperatorDashboardDto, CreateJetRequest
                   <ng-container matColumnDef="route"><th mat-header-cell *matHeaderCellDef>Route</th><td mat-cell *matCellDef="let b">{{b.origin}} → {{b.destination}}</td></ng-container>
                   <ng-container matColumnDef="date"><th mat-header-cell *matHeaderCellDef>Date</th><td mat-cell *matCellDef="let b">{{b.departureUtc | date:'MMM d, y'}}</td></ng-container>
                   <ng-container matColumnDef="pax"><th mat-header-cell *matHeaderCellDef>Pax</th><td mat-cell *matCellDef="let b">{{b.passengerCount}}</td></ng-container>
-                  <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">₹{{b.totalAmount | number:'1.0-0'}}</td></ng-container>
+                  <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">\${{b.totalAmount | number:'1.0-0'}}</td></ng-container>
                   <ng-container matColumnDef="actions">
                     <th mat-header-cell *matHeaderCellDef>Actions</th>
                     <td mat-cell *matCellDef="let b">
@@ -248,7 +248,7 @@ import { JetDto, EmptyLegDto, BookingDto, OperatorDashboardDto, CreateJetRequest
                       <span class="status-badge" [ngClass]="'status-' + b.status.toLowerCase()">{{b.status}}</span>
                     </td>
                   </ng-container>
-                  <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">₹{{b.totalAmount | number:'1.0-0'}}</td></ng-container>
+                  <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">\${{b.totalAmount | number:'1.0-0'}}</td></ng-container>
                   <ng-container matColumnDef="detail">
                     <th mat-header-cell *matHeaderCellDef></th>
                     <td mat-cell *matCellDef="let b">
@@ -274,9 +274,7 @@ import { JetDto, EmptyLegDto, BookingDto, OperatorDashboardDto, CreateJetRequest
                   <div class="detail-row"><span class="detail-label">Jet</span><span>{{selectedBooking.jetModel}}</span></div>
                   <div class="detail-row"><span class="detail-label">Departure</span><span>{{selectedBooking.departureUtc | date:'MMM d, y, h:mm a'}}</span></div>
                   <div class="detail-row"><span class="detail-label">Status</span><span class="status-badge" [ngClass]="'status-' + selectedBooking.status.toLowerCase()">{{selectedBooking.status}}</span></div>
-                  <div class="detail-row"><span class="detail-label">Base Amount</span><span>₹{{selectedBooking.baseAmount | number:'1.0-0'}}</span></div>
-                  <div class="detail-row"><span class="detail-label">Tax</span><span>₹{{selectedBooking.taxAmount | number:'1.0-0'}}</span></div>
-                  <div class="detail-row total-row"><span class="detail-label">Total</span><span>₹{{selectedBooking.totalAmount | number:'1.0-0'}}</span></div>
+                  <div class="detail-row total-row"><span class="detail-label">Total</span><span>\${{selectedBooking.totalAmount | number:'1.0-0'}}</span></div>
                 </div>
                 <div *ngIf="selectedBooking.passengers?.length" style="margin-top:16px">
                   <h4 style="color:#1B2A5C;margin-bottom:8px">Passengers</h4>
@@ -334,7 +332,7 @@ import { JetDto, EmptyLegDto, BookingDto, OperatorDashboardDto, CreateJetRequest
                     <input matInput type="number" formControlName="seatingCapacity">
                   </mat-form-field>
                   <mat-form-field appearance="outline">
-                    <mat-label>Base Price (₹)</mat-label>
+                    <mat-label>Base Price ($)</mat-label>
                     <input matInput type="number" formControlName="basePrice">
                   </mat-form-field>
                 </div>
@@ -426,7 +424,7 @@ import { JetDto, EmptyLegDto, BookingDto, OperatorDashboardDto, CreateJetRequest
                     <input matInput type="number" formControlName="availableSeats">
                   </mat-form-field>
                   <mat-form-field appearance="outline">
-                    <mat-label>Price (₹)</mat-label>
+                    <mat-label>Price ($)</mat-label>
                     <input matInput type="number" formControlName="price">
                   </mat-form-field>
                   <mat-form-field appearance="outline">
@@ -640,7 +638,7 @@ export class OperatorDashboardComponent implements OnInit {
   }
 
   deleteJet(j: JetDto): void {
-    if (!confirm(`Deactivate ${j.manufacturer} ${j.modelName}?`)) return;
+    if (!confirm(`Deactivate \${j.manufacturer} \${j.modelName}?`)) return;
     this.operatorService.deleteJet(j.id).subscribe({
       next: () => { this.loadJets(); this.snackBar.open('Jet deactivated', 'Close', { duration: 2000 }); },
       error: () => { this.snackBar.open('Failed to deactivate jet', 'Close', { duration: 3000 }); }

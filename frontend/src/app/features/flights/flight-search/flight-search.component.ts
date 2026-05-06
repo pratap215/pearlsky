@@ -58,7 +58,7 @@ import { EmptyLegDto, PagedResult } from '../../../core/models/models';
           </mat-select>
         </mat-form-field>
         <mat-form-field appearance="outline" class="filter-field-sm">
-          <mat-label>Max Price (₹)</mat-label>
+          <mat-label>Max Price ($)</mat-label>
           <input matInput type="number" [(ngModel)]="filters.maxPrice" (ngModelChange)="onFilterChange()">
         </mat-form-field>
         <mat-form-field appearance="outline" class="filter-field-sm">
@@ -137,8 +137,7 @@ import { EmptyLegDto, PagedResult } from '../../../core/models/models';
               <mat-icon>airline_seat_recline_normal</mat-icon> {{flight.availableSeats}} seats • {{flight.operatorName}}
             </div>
             <div class="fcard-price">
-              <div class="fcard-price-main">₹{{flight.price | number:'1.0-0'}}</div>
-              <div class="fcard-price-tax">+₹{{flight.taxAmount | number:'1.0-0'}} GST</div>
+              <div class="fcard-price-main">\${{flight.totalPrice | number:'1.0-0'}}</div>
             </div>
           </mat-card-content>
           <!-- Actions -->
@@ -392,7 +391,7 @@ export class FlightSearchComponent implements OnInit, OnDestroy {
   getDuration(minutes: number): string {
     const h = Math.floor(minutes / 60);
     const m = minutes % 60;
-    return `${h}h ${m}m`;
+    return `\${h}h \${m}m`;
   }
 
   onImgError(event: Event): void {

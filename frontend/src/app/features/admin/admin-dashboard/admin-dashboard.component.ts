@@ -52,8 +52,8 @@ import { AdminDashboardDto, OperatorListDto, BookingDto, CouponDto, CreateCoupon
             <div class="stat-card"><mat-icon class="stat-icon">book_online</mat-icon><div class="stat-value">{{dashboard.totalBookings}}</div><div class="stat-label">Bookings</div></div>
             <div class="stat-card"><mat-icon class="stat-icon">flight_takeoff</mat-icon><div class="stat-value">{{dashboard.activeEmptyLegs}}</div><div class="stat-label">Active Legs</div></div>
             <div class="stat-card"><mat-icon class="stat-icon">lock</mat-icon><div class="stat-value">{{dashboard.blockedEmptyLegs}}</div><div class="stat-label">Blocked Legs</div></div>
-            <div class="stat-card"><mat-icon class="stat-icon">payments</mat-icon><div class="stat-value">₹{{(dashboard.totalRevenue || 0) | number:'1.0-0'}}</div><div class="stat-label">Total Revenue</div></div>
-            <div class="stat-card"><mat-icon class="stat-icon">trending_up</mat-icon><div class="stat-value">₹{{(dashboard.monthlyRevenue || 0) | number:'1.0-0'}}</div><div class="stat-label">Monthly Revenue</div></div>
+            <div class="stat-card"><mat-icon class="stat-icon">payments</mat-icon><div class="stat-value">\${{(dashboard.totalRevenue || 0) | number:'1.0-0'}}</div><div class="stat-label">Total Revenue</div></div>
+            <div class="stat-card"><mat-icon class="stat-icon">trending_up</mat-icon><div class="stat-value">\${{(dashboard.monthlyRevenue || 0) | number:'1.0-0'}}</div><div class="stat-label">Monthly Revenue</div></div>
           </div>
           <div *ngIf="!isLoadingDash && dashboard?.recentBookings?.length" class="mat-table-container">
             <h3 style="padding:16px;margin:0;color:#1B2A5C">Recent Bookings</h3>
@@ -62,7 +62,7 @@ import { AdminDashboardDto, OperatorListDto, BookingDto, CouponDto, CreateCoupon
               <ng-container matColumnDef="operator"><th mat-header-cell *matHeaderCellDef>Operator</th><td mat-cell *matCellDef="let b">{{b.operatorName}}</td></ng-container>
               <ng-container matColumnDef="route"><th mat-header-cell *matHeaderCellDef>Route</th><td mat-cell *matCellDef="let b">{{b.origin}} → {{b.destination}}</td></ng-container>
               <ng-container matColumnDef="status"><th mat-header-cell *matHeaderCellDef>Status</th><td mat-cell *matCellDef="let b"><span class="status-badge" [ngClass]="'status-' + b.status.toLowerCase()">{{b.status}}</span></td></ng-container>
-              <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">₹{{b.totalAmount | number:'1.0-0'}}</td></ng-container>
+              <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">\${{b.totalAmount | number:'1.0-0'}}</td></ng-container>
               <tr mat-header-row *matHeaderRowDef="['ref','operator','route','status','amount']"></tr>
               <tr mat-row *matRowDef="let row; columns: ['ref','operator','route','status','amount'];"></tr>
             </table>
@@ -79,7 +79,7 @@ import { AdminDashboardDto, OperatorListDto, BookingDto, CouponDto, CreateCoupon
               <ng-container matColumnDef="location"><th mat-header-cell *matHeaderCellDef>Location</th><td mat-cell *matCellDef="let o">{{o.city}}, {{o.country}}</td></ng-container>
               <ng-container matColumnDef="jets"><th mat-header-cell *matHeaderCellDef>Jets</th><td mat-cell *matCellDef="let o">{{o.totalJets}}</td></ng-container>
               <ng-container matColumnDef="bookings"><th mat-header-cell *matHeaderCellDef>Bookings</th><td mat-cell *matCellDef="let o">{{o.totalBookings}}</td></ng-container>
-              <ng-container matColumnDef="revenue"><th mat-header-cell *matHeaderCellDef>Revenue</th><td mat-cell *matCellDef="let o">₹{{o.revenue | number:'1.0-0'}}</td></ng-container>
+              <ng-container matColumnDef="revenue"><th mat-header-cell *matHeaderCellDef>Revenue</th><td mat-cell *matCellDef="let o">\${{o.revenue | number:'1.0-0'}}</td></ng-container>
               <ng-container matColumnDef="status">
                 <th mat-header-cell *matHeaderCellDef>Status</th>
                 <td mat-cell *matCellDef="let o">
@@ -122,7 +122,7 @@ import { AdminDashboardDto, OperatorListDto, BookingDto, CouponDto, CreateCoupon
               <ng-container matColumnDef="date"><th mat-header-cell *matHeaderCellDef>Date</th><td mat-cell *matCellDef="let b">{{b.departureUtc | date:'MMM d, y'}}</td></ng-container>
               <ng-container matColumnDef="pax"><th mat-header-cell *matHeaderCellDef>Pax</th><td mat-cell *matCellDef="let b">{{b.passengerCount}}</td></ng-container>
               <ng-container matColumnDef="status"><th mat-header-cell *matHeaderCellDef>Status</th><td mat-cell *matCellDef="let b"><span class="status-badge" [ngClass]="'status-' + b.status.toLowerCase()">{{b.status}}</span></td></ng-container>
-              <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">₹{{b.totalAmount | number:'1.0-0'}}</td></ng-container>
+              <ng-container matColumnDef="amount"><th mat-header-cell *matHeaderCellDef>Amount</th><td mat-cell *matCellDef="let b">\${{b.totalAmount | number:'1.0-0'}}</td></ng-container>
               <tr mat-header-row *matHeaderRowDef="bookingColumns"></tr>
               <tr mat-row *matRowDef="let row; columns: bookingColumns;"></tr>
             </table>
@@ -160,7 +160,7 @@ import { AdminDashboardDto, OperatorListDto, BookingDto, CouponDto, CreateCoupon
                 </div>
                 <div class="form-row2">
                   <mat-form-field appearance="outline"><mat-label>Expiry Date</mat-label><input matInput formControlName="expiryDate" placeholder="2026-12-31"></mat-form-field>
-                  <mat-form-field appearance="outline"><mat-label>Min Booking (₹)</mat-label><input matInput type="number" formControlName="minBookingAmount"></mat-form-field>
+                  <mat-form-field appearance="outline"><mat-label>Min Booking ($)</mat-label><input matInput type="number" formControlName="minBookingAmount"></mat-form-field>
                 </div>
                 <div class="coupon-actions">
                   <button mat-button (click)="showCouponForm = false">Cancel</button>
@@ -177,7 +177,7 @@ import { AdminDashboardDto, OperatorListDto, BookingDto, CouponDto, CreateCoupon
             <table mat-table [dataSource]="coupons">
               <ng-container matColumnDef="code"><th mat-header-cell *matHeaderCellDef>Code</th><td mat-cell *matCellDef="let c"><strong>{{c.code}}</strong></td></ng-container>
               <ng-container matColumnDef="type"><th mat-header-cell *matHeaderCellDef>Type</th><td mat-cell *matCellDef="let c">{{c.discountType}}</td></ng-container>
-              <ng-container matColumnDef="value"><th mat-header-cell *matHeaderCellDef>Value</th><td mat-cell *matCellDef="let c">{{c.discountType === 'Percentage' ? c.discountValue + '%' : '₹' + (c.discountValue | number:'1.0-0')}}</td></ng-container>
+              <ng-container matColumnDef="value"><th mat-header-cell *matHeaderCellDef>Value</th><td mat-cell *matCellDef="let c">{{c.discountType === 'Percentage' ? c.discountValue + '%' : '$' + (c.discountValue | number:'1.0-0')}}</td></ng-container>
               <ng-container matColumnDef="uses"><th mat-header-cell *matHeaderCellDef>Uses</th><td mat-cell *matCellDef="let c">{{c.currentUses}} / {{c.maxUses}}</td></ng-container>
               <ng-container matColumnDef="expiry"><th mat-header-cell *matHeaderCellDef>Expiry</th><td mat-cell *matCellDef="let c">{{c.expiryDate | date:'MMM d, y'}}</td></ng-container>
               <ng-container matColumnDef="status"><th mat-header-cell *matHeaderCellDef>Status</th><td mat-cell *matCellDef="let c"><span class="status-badge" [ngClass]="c.isActive ? 'status-available' : 'status-blocked'">{{c.isActive ? 'Active' : 'Inactive'}}</span></td></ng-container>
@@ -273,7 +273,7 @@ export class AdminDashboardComponent implements OnInit {
 
   toggleOperator(op: OperatorListDto): void {
     this.adminService.toggleOperator(op.id).subscribe({
-      next: () => { op.isActive = !op.isActive; this.snackBar.open(`Operator ${op.isActive ? 'activated' : 'deactivated'}`, 'Close', { duration: 3000 }); }
+      next: () => { op.isActive = !op.isActive; this.snackBar.open(`Operator \${op.isActive ? 'activated' : 'deactivated'}`, 'Close', { duration: 3000 }); }
     });
   }
 

@@ -48,6 +48,27 @@ public static class SeedData
         db.Jets.AddRange(jets);
         await db.SaveChangesAsync();
 
+        // ── Jet Images (gallery) ───────────────────────────────────────────────
+        var jetImages = new List<JetImage>();
+        for (int i = 0; i < jetDtos.Count; i++)
+        {
+            var seed = jetDtos[i];
+            if (seed.Images == null) continue;
+            foreach (var img in seed.Images)
+            {
+                jetImages.Add(new JetImage
+                {
+                    JetId = jets[i].Id,
+                    ImageUrl = img.Url,
+                    IsInterior = img.IsInterior,
+                    DisplayOrder = img.DisplayOrder,
+                    Caption = img.Caption ?? string.Empty
+                });
+            }
+        }
+        db.Set<JetImage>().AddRange(jetImages);
+        await db.SaveChangesAsync();
+
         // ── Policies ───────────────────────────────────────────────────────────
         var policies = operators.Select(o => new Policy
         {
@@ -122,8 +143,8 @@ public static class SeedData
         if (demoUser != null)
         {
             db.Notifications.AddRange(
-                new Notification { UserId = demoUser.Id, Title = "Welcome to EmptyLegs!", Message = "Discover exclusive empty leg deals from 20 operators across India and Sri Lanka.", Type = NotificationType.SystemAlert, IsRead = false, CreatedAt = DateTime.UtcNow.AddMinutes(-30) },
-                new Notification { UserId = demoUser.Id, Title = "New flights available", Message = "5 new empty legs from Mumbai to Delhi just listed.", Type = NotificationType.NewEmptyLeg, IsRead = false, CreatedAt = DateTime.UtcNow.AddMinutes(-10) }
+                new Notification { UserId = demoUser.Id, Title = "Welcome to PearlSky!", Message = "Discover exclusive empty leg deals from 20 operators across Asia-Pacific business hubs.", Type = NotificationType.SystemAlert, IsRead = false, CreatedAt = DateTime.UtcNow.AddMinutes(-30) },
+                new Notification { UserId = demoUser.Id, Title = "New flights available", Message = "Fresh empty legs from Singapore, Tokyo, Hong Kong and Dubai just listed.", Type = NotificationType.NewEmptyLeg, IsRead = false, CreatedAt = DateTime.UtcNow.AddMinutes(-10) }
             );
             await db.SaveChangesAsync();
 
@@ -143,7 +164,9 @@ public static class SeedData
     private record JetSeed(int OperatorId, string Manufacturer, string ModelName, string Category,
         string TailNumber, int YearOfManufacture, int SeatingCapacity, int RangeKm, int SpeedKmh,
         string Description, string MainImageUrl, string InteriorImageUrl, decimal BasePrice,
-        string ConfirmationMode, bool HasWifi, bool HasCatering, bool HasBedroom);
+        string ConfirmationMode, bool HasWifi, bool HasCatering, bool HasBedroom,
+        List<JetImageSeed>? Images);
+    private record JetImageSeed(string Url, bool IsInterior, int DisplayOrder, string? Caption);
     private record EmptyLegSeed(int OperatorId, int JetId, string Origin, string OriginCode,
         string Destination, string DestinationCode, string DepartureUtc, string ArrivalUtc,
         int AvailableSeats, decimal Price, decimal TaxPercent, string Status,

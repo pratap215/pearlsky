@@ -87,9 +87,7 @@ import { EmptyLegDetailDto, BookingLockResponse, PassengerDto } from '../../../c
                   <span class="seat-avail">Max {{flight.seatingCapacity || 8}} passengers</span>
                 </div>
                 <div class="charter-price">
-                  <div class="price-row"><span>Charter Price</span><span>₹{{flight.price | number:'1.0-0'}}</span></div>
-                  <div class="price-row"><span>GST (18%)</span><span>₹{{flight.taxAmount | number:'1.0-0'}}</span></div>
-                  <div class="price-row total"><span>Total Charter Fee</span><span>₹{{flight.totalPrice | number:'1.0-0'}}</span></div>
+                  <div class="price-row total"><span>Total Charter Fee</span><span>\${{flight.totalPrice | number:'1.0-0'}}</span></div>
                 </div>
               </mat-card-content>
             </mat-card>
@@ -172,18 +170,17 @@ import { EmptyLegDetailDto, BookingLockResponse, PassengerDto } from '../../../c
               {{couponMessage}}
             </div>
             <div class="credits-section" *ngIf="userCredits > 0">
-              <h4>Use Credits (Available: ₹{{userCredits | number:'1.0-0'}})</h4>
+              <h4>Use Credits (Available: \${{userCredits | number:'1.0-0'}})</h4>
               <mat-slider min="0" [max]="maxCredits" step="100" class="credits-slider">
                 <input matSliderThumb [(ngModel)]="creditsToUse" (ngModelChange)="updateTotal()">
               </mat-slider>
-              <div class="credits-display">Using: ₹{{creditsToUse | number:'1.0-0'}}</div>
+              <div class="credits-display">Using: \${{creditsToUse | number:'1.0-0'}}</div>
             </div>
             <div class="price-breakdown">
-              <div class="price-row"><span>Base Amount</span><span>₹{{baseAmount | number:'1.0-0'}}</span></div>
-              <div class="price-row"><span>GST (18%)</span><span>₹{{taxAmount | number:'1.0-0'}}</span></div>
-              <div class="price-row discount" *ngIf="discountAmount > 0"><span>Coupon Discount</span><span>-₹{{discountAmount | number:'1.0-0'}}</span></div>
-              <div class="price-row discount" *ngIf="creditsToUse > 0"><span>Credits Applied</span><span>-₹{{creditsToUse | number:'1.0-0'}}</span></div>
-              <div class="price-row total"><span>Total Payable</span><span>₹{{finalTotal | number:'1.0-0'}}</span></div>
+              <div class="price-row"><span>Base Amount</span><span>\${{baseAmount | number:'1.0-0'}}</span></div>
+              <div class="price-row discount" *ngIf="discountAmount > 0"><span>Coupon Discount</span><span>-\${{discountAmount | number:'1.0-0'}}</span></div>
+              <div class="price-row discount" *ngIf="creditsToUse > 0"><span>Credits Applied</span><span>-\${{creditsToUse | number:'1.0-0'}}</span></div>
+              <div class="price-row total"><span>Total Payable</span><span>\${{finalTotal | number:'1.0-0'}}</span></div>
             </div>
             <div class="step-actions">
               <button mat-button matStepperPrevious>Back</button>
@@ -203,11 +200,10 @@ import { EmptyLegDetailDto, BookingLockResponse, PassengerDto } from '../../../c
               <p>By booking this flight, you agree to present valid identification for all passengers. Luggage is subject to aircraft weight limits. The operator reserves the right to cancel due to weather or technical issues.</p>
             </div>
             <div class="price-breakdown">
-              <div class="price-row"><span>Base Amount</span><span>₹{{baseAmount | number:'1.0-0'}}</span></div>
-              <div class="price-row"><span>GST (18%)</span><span>₹{{taxAmount | number:'1.0-0'}}</span></div>
-              <div class="price-row discount" *ngIf="discountAmount > 0"><span>Coupon Discount</span><span>-₹{{discountAmount | number:'1.0-0'}}</span></div>
-              <div class="price-row discount" *ngIf="creditsToUse > 0"><span>Credits Applied</span><span>-₹{{creditsToUse | number:'1.0-0'}}</span></div>
-              <div class="price-row total"><span>Total Payable</span><span>₹{{finalTotal | number:'1.0-0'}}</span></div>
+              <div class="price-row"><span>Base Amount</span><span>\${{baseAmount | number:'1.0-0'}}</span></div>
+              <div class="price-row discount" *ngIf="discountAmount > 0"><span>Coupon Discount</span><span>-\${{discountAmount | number:'1.0-0'}}</span></div>
+              <div class="price-row discount" *ngIf="creditsToUse > 0"><span>Credits Applied</span><span>-\${{creditsToUse | number:'1.0-0'}}</span></div>
+              <div class="price-row total"><span>Total Payable</span><span>\${{finalTotal | number:'1.0-0'}}</span></div>
             </div>
             <form [formGroup]="policyForm">
               <mat-checkbox formControlName="policyAcknowledged" color="primary">
@@ -258,11 +254,11 @@ import { EmptyLegDetailDto, BookingLockResponse, PassengerDto } from '../../../c
                 <input matInput [(ngModel)]="cardName">
               </mat-form-field>
             </div>
-            <div class="payment-total">Total: ₹{{finalTotal | number:'1.0-0'}}</div>
+            <div class="payment-total">Total: \${{finalTotal | number:'1.0-0'}}</div>
             <div class="payment-actions">
               <button mat-raised-button color="primary" class="pay-btn" (click)="processPayment(true)" [disabled]="isPaying">
                 <mat-spinner *ngIf="isPaying" diameter="20"></mat-spinner>
-                <span *ngIf="!isPaying"><mat-icon>payment</mat-icon> Pay ₹{{finalTotal | number:'1.0-0'}}</span>
+                <span *ngIf="!isPaying"><mat-icon>payment</mat-icon> Pay \${{finalTotal | number:'1.0-0'}}</span>
               </button>
               <button mat-stroked-button color="warn" (click)="processPayment(false)" [disabled]="isPaying">
                 Simulate Failure
@@ -484,7 +480,7 @@ export class BookingFlowComponent implements OnInit, OnDestroy {
   formatTimer(secs: number): string {
     const m = Math.floor(secs / 60);
     const s = secs % 60;
-    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    return `\${m.toString().padStart(2, '0')}:\${s.toString().padStart(2, '0')}`;
   }
 
   applyCoupon(): void {
@@ -544,7 +540,7 @@ export class BookingFlowComponent implements OnInit, OnDestroy {
   getDuration(minutes: number): string {
     const h = Math.floor(minutes / 60);
     const m = minutes % 60;
-    return `${h}h ${m}m`;
+    return `\${h}h \${m}m`;
   }
 
   ngOnDestroy(): void {

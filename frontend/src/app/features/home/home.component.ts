@@ -31,14 +31,14 @@ import { EmptyLegDto } from '../../core/models/models';
       <div class="hero-content">
         <div class="hero-badge">
           <mat-icon>bolt</mat-icon>
-          <span>Asia's #1 Empty Leg Platform</span>
+          <span>1st Empty Leg Platform in Asia</span>
         </div>
         <h1 class="hero-title">
           Fly Exclusive.<br>
           <span class="hero-accent">Pay Smart.</span>
         </h1>
         <p class="hero-sub">Access private jets at a fraction of the cost.<br>
-          Exclusive empty leg deals from 20+ operators across India & Sri Lanka.</p>
+          Exclusive empty leg deals from 20+ operators across the Region.</p>
 
         <!-- Search Card -->
         <div class="search-card">
@@ -89,7 +89,7 @@ import { EmptyLegDto } from '../../core/models/models';
       <div class="stat-sep"></div>
       <div class="stat-item">
         <div class="stat-icon"><mat-icon>savings</mat-icon></div>
-        <div><div class="stat-num">₹15K+</div><div class="stat-label">Avg. Savings</div></div>
+        <div><div class="stat-num">$15K+</div><div class="stat-label">Avg. Savings</div></div>
       </div>
       <div class="stat-sep"></div>
       <div class="stat-item">
@@ -144,7 +144,7 @@ import { EmptyLegDto } from '../../core/models/models';
               <div class="flight-img-overlay">
                 <span class="status-badge available">{{flight.originCode}} → {{flight.destinationCode}}</span>
               </div>
-              <div class="flight-price-badge">₹{{flight.price | number:'1.0-0'}}</div>
+              <div class="flight-price-badge">\${{flight.price | number:'1.0-0'}}</div>
             </div>
             <mat-card-content class="flight-content">
               <div class="route-row">

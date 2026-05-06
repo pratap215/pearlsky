@@ -73,11 +73,9 @@ import { BookingDto } from '../../../core/models/models';
             <mat-divider style="margin: 16px 0"></mat-divider>
             <h4 style="margin-bottom:12px;color:#1B2A5C">Payment Summary</h4>
             <div class="detail-grid">
-              <div class="detail-row"><span class="detail-label">Base Amount</span><span>₹{{booking.baseAmount | number:'1.0-0'}}</span></div>
-              <div class="detail-row"><span class="detail-label">GST</span><span>₹{{booking.taxAmount | number:'1.0-0'}}</span></div>
-              <div class="detail-row" *ngIf="booking.discountAmount > 0"><span class="detail-label">Discount</span><span class="green">-₹{{booking.discountAmount | number:'1.0-0'}}</span></div>
-              <div class="detail-row" *ngIf="booking.creditsUsed > 0"><span class="detail-label">Credits Used</span><span class="green">-₹{{booking.creditsUsed | number:'1.0-0'}}</span></div>
-              <div class="detail-row total"><span class="detail-label">Total Paid</span><span>₹{{booking.totalAmount | number:'1.0-0'}}</span></div>
+              <div class="detail-row" *ngIf="booking.discountAmount > 0"><span class="detail-label">Discount</span><span class="green">-\${{booking.discountAmount | number:'1.0-0'}}</span></div>
+              <div class="detail-row" *ngIf="booking.creditsUsed > 0"><span class="detail-label">Credits Used</span><span class="green">-\${{booking.creditsUsed | number:'1.0-0'}}</span></div>
+              <div class="detail-row total"><span class="detail-label">Total Paid</span><span>\${{booking.totalAmount | number:'1.0-0'}}</span></div>
             </div>
           </mat-card-content>
         </mat-card>
@@ -169,8 +167,8 @@ export class BookingConfirmationComponent implements OnInit {
 
   shareWhatsApp(): void {
     if (!this.booking) return;
-    const text = `I just booked a private jet! ✈ ${this.booking.origin} → ${this.booking.destination} on ${new Date(this.booking.departureUtc).toDateString()}. Booking Ref: ${this.booking.bookingRef}`;
-    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+    const text = `I just booked a private jet! ✈ \${this.booking.origin} → \${this.booking.destination} on \${new Date(this.booking.departureUtc).toDateString()}. Booking Ref: \${this.booking.bookingRef}`;
+    window.open(`https://wa.me/?text=\${encodeURIComponent(text)}`, '_blank');
   }
 
   printSummary(): void {

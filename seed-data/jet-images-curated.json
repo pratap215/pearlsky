@@ -1,0 +1,62 @@
+{
+  "_comment": "Curated Wikimedia Commons URLs per jet model. type=ext (exterior) or int (interior/cabin/cockpit). Used by SeedData to populate JetImage rows.",
+  "Phenom 300E": [
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Embraer_505_Phenom_300%2C_Aerojet_JP7625910.jpg/1200px-Embraer_505_Phenom_300%2C_Aerojet_JP7625910.jpg", "type": "ext", "caption": "Embraer Phenom 300 on tarmac" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Embraer_Phenom_300_cabin%2C_EBACE_2019_%28EB190435%2C_cropped%29.jpg/1200px-Embraer_Phenom_300_cabin%2C_EBACE_2019_%28EB190435%2C_cropped%29.jpg", "type": "int", "caption": "Phenom 300 cabin interior" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Embraer_505_Phenom_300%2C_Private_JP7321031.jpg/1200px-Embraer_505_Phenom_300%2C_Private_JP7321031.jpg", "type": "ext", "caption": "Phenom 300 — private livery" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/F-HJBR_%2831435863270%29.jpg/1200px-F-HJBR_%2831435863270%29.jpg", "type": "ext", "caption": "Phenom 300 in flight" }
+  ],
+  "PC-24": [
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Royal_Flying_Doctor_Service_of_Australia_%28Western_Operations%29_%28VH-NWO%29_Pilatus_PC-24_%22Ningaloo%22%2C_operating_as_FD626J%2C_taxiing_at_Wagga_Wagga_Airport.jpg/1200px-Royal_Flying_Doctor_Service_of_Australia_%28Western_Operations%29_%28VH-NWO%29_Pilatus_PC-24_%22Ningaloo%22%2C_operating_as_FD626J%2C_taxiing_at_Wagga_Wagga_Airport.jpg", "type": "ext", "caption": "Pilatus PC-24 taxiing" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Pilatus_HB-VSA_overflying_Sumburgh%2C_Scotland%2C_1_nov_2017.jpg/1200px-Pilatus_HB-VSA_overflying_Sumburgh%2C_Scotland%2C_1_nov_2017.jpg", "type": "ext", "caption": "PC-24 in flight" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Pilatus_PC-24%2C_AERO_Friedrichshafen_201_%281X7A4404%29.jpg/1200px-Pilatus_PC-24%2C_AERO_Friedrichshafen_201_%281X7A4404%29.jpg", "type": "ext", "caption": "PC-24 at AERO Friedrichshafen" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Pilatus_PC-24%2C_P01%2C_HB-VXA_%2818743050229%29_%28cropped%29.jpg/1200px-Pilatus_PC-24%2C_P01%2C_HB-VXA_%2818743050229%29_%28cropped%29.jpg", "type": "ext", "caption": "PC-24 prototype" }
+  ],
+  "King Air 350ER": [
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Beech_b300_kingair_350_m-five_arp.jpg/1200px-Beech_b300_kingair_350_m-five_arp.jpg", "type": "ext", "caption": "Beechcraft King Air 350" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pearl_Aviation_%28VH-FIX%29_Beechcraft_B300_King_Air_350_at_Sydney_Airport.jpg/1200px-Pearl_Aviation_%28VH-FIX%29_Beechcraft_B300_King_Air_350_at_Sydney_Airport.jpg", "type": "ext", "caption": "King Air 350 at Sydney" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Beechcraft_B200_King_Air_-_VH-MSH.jpg/1200px-Beechcraft_B200_King_Air_-_VH-MSH.jpg", "type": "ext", "caption": "King Air twin-engine" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/N857GAatSYD.JPG/1200px-N857GAatSYD.JPG", "type": "ext", "caption": "King Air 350" }
+  ],
+  "Global 6000": [
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Bombardier_Global_6500_N650SS_FDK_MD2.jpg/1200px-Bombardier_Global_6500_N650SS_FDK_MD2.jpg", "type": "ext", "caption": "Bombardier Global on ground" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Vista_Jet_Bombardier_BD-700-1A10_Global_Express_XRS%3B_OE-LXR%40ZRH%3B08.06.2011_%285832393313%29_%28cropped%29.jpg/1200px-Vista_Jet_Bombardier_BD-700-1A10_Global_Express_XRS%3B_OE-LXR%40ZRH%3B08.06.2011_%285832393313%29_%28cropped%29.jpg", "type": "ext", "caption": "VistaJet Global Express XRS" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Bombardier_BD-700-1A10_Global_Express%2C_Qatar_Airways_JP7321029.jpg/1200px-Bombardier_BD-700-1A10_Global_Express%2C_Qatar_Airways_JP7321029.jpg", "type": "ext", "caption": "Global Express in flight" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Untitled_Bombardier_BD-700-1A10_Global_Express%3B_LX-AAA%40ZRH%3B26.11.2012_%288222984297%29.jpg/1200px-Untitled_Bombardier_BD-700-1A10_Global_Express%3B_LX-AAA%40ZRH%3B26.11.2012_%288222984297%29.jpg", "type": "ext", "caption": "Global Express at Zurich" }
+  ],
+  "G550": [
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/2010-07-21_G550_NetJets_CS-DKE_EDDF_01.jpg/1200px-2010-07-21_G550_NetJets_CS-DKE_EDDF_01.jpg", "type": "ext", "caption": "Gulfstream G550 — NetJets" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Gulfstream_G550_flight_deck.jpg/1200px-Gulfstream_G550_flight_deck.jpg", "type": "int", "caption": "G550 flight deck" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Gulfstream_Aerospace_G-V-SP_Gulfstream_G550_AN1299906.jpg/1200px-Gulfstream_Aerospace_G-V-SP_Gulfstream_G550_AN1299906.jpg", "type": "ext", "caption": "G550 in flight" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/U.S._Air_Force%2C_09-0525%2C_Gulfstream_Aerospace_C-37B_%2827878765353%29.jpg/1200px-U.S._Air_Force%2C_09-0525%2C_Gulfstream_Aerospace_C-37B_%2827878765353%29.jpg", "type": "ext", "caption": "Gulfstream C-37B (G550)" }
+  ],
+  "G280": [
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Gulfstream_G280%2C_EBACE_2018%2C_Le_Grand-Saconnex_%28BL7C0664%29.jpg/1200px-Gulfstream_G280%2C_EBACE_2018%2C_Le_Grand-Saconnex_%28BL7C0664%29.jpg", "type": "ext", "caption": "Gulfstream G280 at EBACE" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Gulfstream_G280_cabin_interior_with_divan.JPG/1200px-Gulfstream_G280_cabin_interior_with_divan.JPG", "type": "int", "caption": "G280 cabin with divan" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/IAI_Gulfstream_G280_-_Gulfstrem_Aerospace_%2818701234531%29.jpg/1200px-IAI_Gulfstream_G280_-_Gulfstrem_Aerospace_%2818701234531%29.jpg", "type": "ext", "caption": "G280 production" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/4X-CVC_Udi_Brill.jpg/1200px-4X-CVC_Udi_Brill.jpg", "type": "ext", "caption": "G280 in flight" }
+  ],
+  "Falcon 2000LX": [
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Volkswagen_Air_Service_Falcon_2000_VP-CGA.jpg/1200px-Volkswagen_Air_Service_Falcon_2000_VP-CGA.jpg", "type": "ext", "caption": "Dassault Falcon 2000" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Dassault_Falcon_2000_LX_interior.JPG/1200px-Dassault_Falcon_2000_LX_interior.JPG", "type": "int", "caption": "Falcon 2000LX interior" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Starlink_Aviation_Dassault_Falcon_2000EX_C-FDBJ_Montr%C3%A9al-Pierre_Elliott_Trudeau_International_Airport.jpg/1200px-Starlink_Aviation_Dassault_Falcon_2000EX_C-FDBJ_Montr%C3%A9al-Pierre_Elliott_Trudeau_International_Airport.jpg", "type": "ext", "caption": "Falcon 2000EX at Montreal" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Falcon_2000_Albatros-002.jpg/1200px-Falcon_2000_Albatros-002.jpg", "type": "ext", "caption": "Falcon 2000 Albatros" }
+  ],
+  "Citation XLS+": [
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/ABC_Bedarfsflug_Cessna_560XL_Citation_XLS_taking_off_from_Innsbruck_Airport.jpg/1200px-ABC_Bedarfsflug_Cessna_560XL_Citation_XLS_taking_off_from_Innsbruck_Airport.jpg", "type": "ext", "caption": "Citation XLS taking off" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Cessna_560XL_Citation_XLS.jpg/1200px-Cessna_560XL_Citation_XLS.jpg", "type": "ext", "caption": "Cessna Citation XLS" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/CitationXL-Cockpit.jpg/1200px-CitationXL-Cockpit.jpg", "type": "int", "caption": "Citation XL cockpit" }
+  ],
+  "Citation CJ3+": [
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Cessna_525B_Citation_CJ3_AN1699978.jpg/1200px-Cessna_525B_Citation_CJ3_AN1699978.jpg", "type": "ext", "caption": "Cessna Citation CJ3" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Cockpit_of_Cessna_525B_CitationJet_3.jpg/1200px-Cockpit_of_Cessna_525B_CitationJet_3.jpg", "type": "int", "caption": "CJ3 cockpit" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Cessna_CitationJet_CJ1_%288735081113%29.jpg/1200px-Cessna_CitationJet_CJ1_%288735081113%29.jpg", "type": "ext", "caption": "CitationJet CJ1" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/N862MT_C525%28Citation_M2%29_Cessna_Aircraft_VKO_UUWW_%2833471434942%29.jpg/1200px-N862MT_C525%28Citation_M2%29_Cessna_Aircraft_VKO_UUWW_%2833471434942%29.jpg", "type": "ext", "caption": "Cessna Citation M2" }
+  ],
+  "Challenger 350": [
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/CS-CHE_Bombardier_Challenger_350_Netjets_Europe_%2828570675881%29.jpg/1200px-CS-CHE_Bombardier_Challenger_350_Netjets_Europe_%2828570675881%29.jpg", "type": "ext", "caption": "Challenger 350 — NetJets" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bombardier_Challenger_300_interior_3.JPG/1200px-Bombardier_Challenger_300_interior_3.JPG", "type": "int", "caption": "Challenger 300/350 interior" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Bombardier_BD-100-1A10_Challenger_300_AN1704544.jpg/1200px-Bombardier_BD-100-1A10_Challenger_300_AN1704544.jpg", "type": "ext", "caption": "Challenger 300" },
+    { "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Bombardier_BD-100-1A10_Challenger_300_AN1408982.jpg/1200px-Bombardier_BD-100-1A10_Challenger_300_AN1408982.jpg", "type": "ext", "caption": "Challenger 300 in flight" }
+  ]
+}
