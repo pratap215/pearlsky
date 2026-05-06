@@ -1,5 +1,5 @@
 # ═══════════════════════════════════════════════════════════════════
-#  JetFlux — Multi-stage Docker Build
+#  PearlSky — Multi-stage Docker Build
 #  Stage 1 : Build Angular SPA  (Node 20)
 #  Stage 2 : Publish .NET 9 API (SDK)
 #  Stage 3 : Runtime image      (ASP.NET runtime only — smallest)
@@ -54,4 +54,4 @@ ENV ASPNETCORE_ENVIRONMENT=Production
 
 # Render/Railway/Fly.io inject PORT at runtime; fall back to 8080
 EXPOSE 8080
-CMD ["sh", "-c", "dotnet JetFlux.dll"]
+CMD ["sh", "-c", "dotnet PearlSky.dll"]

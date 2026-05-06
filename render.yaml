@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: jetflux
+    name: pearlsky
     runtime: docker
     plan: free
     dockerfilePath: ./Dockerfile
@@ -10,9 +10,9 @@ services:
       - key: Jwt__Secret
         generateValue: true
       - key: Jwt__Issuer
-        value: JetFlux
+        value: PearlSky
       - key: Jwt__Audience
-        value: JetFluxApp
+        value: PearlSkyApp
       - key: Payment__Mode
         value: Gateway
       - key: Email__Enabled

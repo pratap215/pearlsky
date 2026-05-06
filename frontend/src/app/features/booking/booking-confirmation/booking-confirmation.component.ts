@@ -71,7 +71,7 @@ import { BookingDto } from '../../../core/models/models';
               </div>
             </div>
             <mat-divider style="margin: 16px 0"></mat-divider>
-            <h4 style="margin-bottom:12px;color:#1a237e">Payment Summary</h4>
+            <h4 style="margin-bottom:12px;color:#1B2A5C">Payment Summary</h4>
             <div class="detail-grid">
               <div class="detail-row"><span class="detail-label">Base Amount</span><span>₹{{booking.baseAmount | number:'1.0-0'}}</span></div>
               <div class="detail-row"><span class="detail-label">GST</span><span>₹{{booking.taxAmount | number:'1.0-0'}}</span></div>
@@ -122,19 +122,19 @@ import { BookingDto } from '../../../core/models/models';
     .conf-header { text-align: center; margin-bottom: 32px; }
     .success-icon { font-size: 80px; width: 80px; height: 80px; color: #4caf50; display: block; margin: 0 auto 16px; animation: checkmark 0.6s ease-out; }
     @keyframes checkmark { 0% { transform: scale(0); opacity: 0; } 60% { transform: scale(1.2); } 100% { transform: scale(1); opacity: 1; } }
-    h1 { font-size: 28px; font-weight: 800; color: #1a237e; margin-bottom: 8px; }
+    h1 { font-size: 28px; font-weight: 800; color: #1B2A5C; margin-bottom: 8px; }
     h1.pending-title { color: #e65100; }
-    .booking-ref { font-size: 20px; font-weight: 700; color: #1a237e; background: #e8eaf6; padding: 8px 24px; border-radius: 8px; display: inline-block; margin-bottom: 12px; }
+    .booking-ref { font-size: 20px; font-weight: 700; color: #1B2A5C; background: #e8eaf6; padding: 8px 24px; border-radius: 8px; display: inline-block; margin-bottom: 12px; }
     .conf-subtitle { font-size: 14px; color: #666; max-width: 450px; margin: 0 auto; }
     .details-card { border-radius: 12px !important; margin-bottom: 20px; }
     .detail-grid { }
     .detail-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #f5f5f5; font-size: 14px; }
-    .detail-row.total { font-size: 16px; font-weight: 700; color: #1a237e; border-bottom: none; }
+    .detail-row.total { font-size: 16px; font-weight: 700; color: #1B2A5C; border-bottom: none; }
     .detail-label { color: #888; }
     .detail-val { font-weight: 500; }
     .green { color: #2e7d32; }
     .pax-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f5f5f5; font-size: 14px; }
-    .pax-row mat-icon { color: #1a237e; }
+    .pax-row mat-icon { color: #1B2A5C; }
     .pax-passport { color: #888; font-size: 12px; margin-left: auto; }
     .pax-nat { color: #666; font-size: 12px; }
     .conf-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 24px; }

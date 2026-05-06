@@ -76,20 +76,20 @@ import { AuthService } from '../../../core/services/auth.service';
     .login-page { min-height: calc(100vh - 64px); display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #f5f7fa 0%, #e8eaf6 100%); padding: 24px; }
     .login-card { width: 100%; max-width: 440px; border-radius: 16px !important; box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important; }
     .logo-area { text-align: center; width: 100%; padding: 24px 0 16px; }
-    .logo-icon { font-size: 48px; width: 48px; height: 48px; color: #1a237e; }
-    .logo-area h2 { font-size: 22px; font-weight: 700; color: #1a237e; margin: 8px 0 4px; }
+    .logo-icon { font-size: 48px; width: 48px; height: 48px; color: #1B2A5C; }
+    .logo-area h2 { font-size: 22px; font-weight: 700; color: #1B2A5C; margin: 8px 0 4px; }
     .logo-area p { color: #666; font-size: 14px; }
     .full-width { width: 100%; margin-bottom: 16px; }
     .submit-btn { width: 100%; height: 48px; font-size: 16px; font-weight: 600; margin-top: 8px; }
     .inline-spinner { display: inline-block; }
     .register-link { text-align: center; margin-top: 16px; font-size: 14px; color: #666; }
-    .register-link a { color: #1a237e; font-weight: 600; text-decoration: none; }
+    .register-link a { color: #1B2A5C; font-weight: 600; text-decoration: none; }
     .demo-box { margin-top: 20px; background: #f8f9ff; border: 1px solid #e8eaf6; border-radius: 8px; padding: 16px; }
-    .demo-title { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #1a237e; margin-bottom: 10px; }
+    .demo-title { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #1B2A5C; margin-bottom: 10px; }
     .demo-title mat-icon { font-size: 16px; width: 16px; height: 16px; }
     .demo-item { font-size: 12px; padding: 6px 8px; border-radius: 4px; cursor: pointer; margin-bottom: 4px; color: #444; display: flex; align-items: center; gap: 8px; }
     .demo-item:hover { background: #e8eaf6; }
-    .demo-role { background: #e8eaf6; color: #1a237e; padding: 2px 8px; border-radius: 10px; font-weight: 600; font-size: 10px; }
+    .demo-role { background: #e8eaf6; color: #1B2A5C; padding: 2px 8px; border-radius: 10px; font-weight: 600; font-size: 10px; }
     .demo-role.operator { background: #e8f5e9; color: #2e7d32; }
     .demo-role.admin { background: #fce4ec; color: #c62828; }
     .demo-hint { font-size: 10px; color: #999; margin-top: 4px; text-align: right; }

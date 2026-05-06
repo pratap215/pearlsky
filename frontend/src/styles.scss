@@ -31,7 +31,7 @@ body {
 
 // ── Layout ────────────────────────────────────────────────────────────────────
 .page-container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-.page-title { font-size: 28px; font-weight: 700; color: #1a237e; margin-bottom: 8px; }
+.page-title { font-size: 28px; font-weight: 700; color: #1B2A5C; margin-bottom: 8px; }
 .page-subtitle { color: #666; margin-bottom: 24px; font-size: 15px; }
 
 // ── Status Badges ─────────────────────────────────────────────────────────────
@@ -89,7 +89,7 @@ body {
   border-bottom: 1px solid #f0f0f0;
   margin-bottom: 8px;
 }
-.sidebar-header h3 { font-size: 16px; font-weight: 600; color: #1a237e; }
+.sidebar-header h3 { font-size: 16px; font-weight: 600; color: #1B2A5C; }
 .sidebar-header p { font-size: 13px; color: #666; }
 .sidebar-item {
   display: flex;
@@ -102,8 +102,8 @@ body {
   font-weight: 500;
   transition: all 0.2s;
 }
-.sidebar-item:hover { background: #f5f7fa; color: #1a237e; }
-.sidebar-item.active { background: #e8eaf6; color: #1a237e; font-weight: 600; border-right: 3px solid #1a237e; }
+.sidebar-item:hover { background: #f5f7fa; color: #1B2A5C; }
+.sidebar-item.active { background: #e8eaf6; color: #1B2A5C; font-weight: 600; border-right: 3px solid #1B2A5C; }
 .sidebar-content { flex: 1; padding: 32px; overflow-y: auto; }
 
 // ── Table Styles ──────────────────────────────────────────────────────────────
@@ -113,7 +113,7 @@ table { width: 100%; }
 // ── Price Breakdown ───────────────────────────────────────────────────────────
 .price-breakdown { background: #f9f9fb; border-radius: 8px; padding: 16px; margin: 16px 0; }
 .price-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px; color: #555; }
-.price-row.total { font-size: 18px; font-weight: 700; color: #1a237e; border-top: 2px solid #e0e0e0; margin-top: 8px; padding-top: 12px; }
+.price-row.total { font-size: 18px; font-weight: 700; color: #1B2A5C; border-top: 2px solid #e0e0e0; margin-top: 8px; padding-top: 12px; }
 .price-row.discount { color: #2e7d32; }
 
 // ── Responsive ────────────────────────────────────────────────────────────────

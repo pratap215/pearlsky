@@ -31,7 +31,7 @@ import { EmptyLegDto } from '../../core/models/models';
       <div class="hero-content">
         <div class="hero-badge">
           <mat-icon>bolt</mat-icon>
-          <span>India's #1 Empty Leg Platform</span>
+          <span>Asia's #1 Empty Leg Platform</span>
         </div>
         <h1 class="hero-title">
           Fly Exclusive.<br>
@@ -102,7 +102,7 @@ import { EmptyLegDto } from '../../core/models/models';
     <section class="section">
       <div class="page-container">
         <div class="section-header">
-          <h2 class="section-title">How JetFlux Works</h2>
+          <h2 class="section-title">How PearlSky Works</h2>
           <p class="section-sub">Book your private jet in three simple steps</p>
         </div>
         <div class="how-grid">
@@ -185,20 +185,20 @@ import { EmptyLegDto } from '../../core/models/models';
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-brand">
-          <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
-            <circle cx="18" cy="18" r="18" fill="#FFB800"/>
-            <path d="M9 23 L15 9 L20 16 L27 11 L23 27 L17 20 Z" fill="#0A0F2E"/>
-          </svg>
-          <span class="footer-logo-text">Jet<span style="color:#FFB800">Flux</span></span>
+          <img src="logo.jpeg" alt="PearlSky" class="footer-logo-img">
+          <div class="footer-brand-text">
+            <span class="footer-logo-text">PearlSky</span>
+            <span class="footer-logo-tagline">Discover the Hidden Sky Gems</span>
+          </div>
         </div>
-        <p class="footer-copy">&copy; 2026 JetFlux. All rights reserved. | Private Jet Booking Platform</p>
+        <p class="footer-copy">&copy; 2026 PearlSky. All rights reserved. | Private Jet Booking Platform</p>
       </div>
     </footer>
   `,
   styles: [`
     /* ── Hero ─────────────────────────────────────────────────────────────── */
     .hero {
-      background: linear-gradient(135deg, #0A0F2E 0%, #131B4D 50%, #0D1A3A 100%);
+      background: linear-gradient(135deg, #1B2A5C 0%, #243A75 50%, #0F1A40 100%);
       color: white;
       padding: 80px 24px 70px;
       text-align: center;
@@ -212,7 +212,7 @@ import { EmptyLegDto } from '../../core/models/models';
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(ellipse at center, rgba(255,184,0,0.06) 0%, transparent 70%);
+      background: radial-gradient(ellipse at center, rgba(201,166,107,0.06) 0%, transparent 70%);
       pointer-events: none;
     }
     .hero-content { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
@@ -220,9 +220,9 @@ import { EmptyLegDto } from '../../core/models/models';
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(255,184,0,0.12);
-      border: 1px solid rgba(255,184,0,0.3);
-      color: #FFB800;
+      background: rgba(201,166,107,0.12);
+      border: 1px solid rgba(201,166,107,0.3);
+      color: #C9A66B;
       padding: 6px 16px;
       border-radius: 20px;
       font-size: 13px;
@@ -238,7 +238,7 @@ import { EmptyLegDto } from '../../core/models/models';
       margin-bottom: 20px;
       letter-spacing: -1px;
     }
-    .hero-accent { color: #FFB800; }
+    .hero-accent { color: #C9A66B; }
     .hero-sub { font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 48px; line-height: 1.6; }
     .search-card {
       background: rgba(255,255,255,0.97);
@@ -255,8 +255,8 @@ import { EmptyLegDto } from '../../core/models/models';
       font-size: 15px;
       font-weight: 700;
       padding: 0 28px;
-      background: #FFB800 !important;
-      color: #0A0F2E !important;
+      background: #C9A66B !important;
+      color: #1B2A5C !important;
       border-radius: 8px !important;
       flex-shrink: 0;
     }
@@ -267,14 +267,14 @@ import { EmptyLegDto } from '../../core/models/models';
       justify-content: center;
       align-items: center;
       gap: 0;
-      background: #0A0F2E;
+      background: #1B2A5C;
       padding: 24px;
-      border-top: 1px solid rgba(255,184,0,0.2);
+      border-top: 1px solid rgba(201,166,107,0.2);
       flex-wrap: wrap;
     }
     .stat-item { display: flex; align-items: center; gap: 12px; padding: 0 40px; }
-    .stat-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(255,184,0,0.12); display: flex; align-items: center; justify-content: center; }
-    .stat-icon mat-icon { color: #FFB800; font-size: 22px; width: 22px; height: 22px; }
+    .stat-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(201,166,107,0.12); display: flex; align-items: center; justify-content: center; }
+    .stat-icon mat-icon { color: #C9A66B; font-size: 22px; width: 22px; height: 22px; }
     .stat-num { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; color: white; }
     .stat-label { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
     .stat-sep { width: 1px; height: 48px; background: rgba(255,255,255,0.1); }
@@ -283,8 +283,8 @@ import { EmptyLegDto } from '../../core/models/models';
     .section { padding: 72px 0; }
     .section-dark { background: #f8f9ff; }
     .section-header { text-align: center; margin-bottom: 48px; }
-    .section-title { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: #0A0F2E; margin: 0 0 8px; }
-    .section-title.light { color: #0A0F2E; }
+    .section-title { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: #1B2A5C; margin: 0 0 8px; }
+    .section-title.light { color: #1B2A5C; }
     .section-sub { font-size: 16px; color: #666; margin: 0; }
     .section-sub.light { color: #666; }
     .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -298,9 +298,9 @@ import { EmptyLegDto } from '../../core/models/models';
       position: relative;
     }
     .how-num { position: absolute; top: 20px; right: 20px; font-family: 'Montserrat', sans-serif; font-size: 48px; font-weight: 900; color: rgba(10,15,46,0.05); line-height: 1; }
-    .how-icon { width: 64px; height: 64px; border-radius: 16px; background: #0A0F2E; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
-    .how-icon mat-icon { font-size: 30px; width: 30px; height: 30px; color: #FFB800; }
-    .how-card h3 { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 800; margin-bottom: 10px; color: #0A0F2E; }
+    .how-icon { width: 64px; height: 64px; border-radius: 16px; background: #1B2A5C; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+    .how-icon mat-icon { font-size: 30px; width: 30px; height: 30px; color: #C9A66B; }
+    .how-card h3 { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 800; margin-bottom: 10px; color: #1B2A5C; }
     .how-card p { color: #666; font-size: 14px; line-height: 1.6; margin: 0; }
 
     /* ── Flight Cards ──────────────────────────────────────────────────────── */
@@ -313,7 +313,7 @@ import { EmptyLegDto } from '../../core/models/models';
       background: white;
     }
     .flight-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0,0,0,0.15) !important; }
-    .flight-img-wrap { position: relative; height: 160px; overflow: hidden; background: linear-gradient(135deg, #0A0F2E, #1a237e); }
+    .flight-img-wrap { position: relative; height: 160px; overflow: hidden; background: linear-gradient(135deg, #1B2A5C, #1B2A5C); }
     .flight-img { width: 100%; height: 100%; object-fit: cover; }
     .flight-img-overlay { position: absolute; top: 10px; left: 10px; }
     .status-badge { background: rgba(0,0,0,0.6); color: white; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; }
@@ -321,8 +321,8 @@ import { EmptyLegDto } from '../../core/models/models';
       position: absolute;
       bottom: 10px;
       right: 10px;
-      background: #FFB800;
-      color: #0A0F2E;
+      background: #C9A66B;
+      color: #1B2A5C;
       padding: 4px 12px;
       border-radius: 8px;
       font-size: 15px;
@@ -331,17 +331,17 @@ import { EmptyLegDto } from '../../core/models/models';
     }
     .flight-content { padding: 16px 16px 4px; }
     .route-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-    .city-name { font-size: 16px; font-weight: 700; color: #0A0F2E; }
-    .route-arrow { font-size: 18px; color: #FFB800; }
+    .city-name { font-size: 16px; font-weight: 700; color: #1B2A5C; }
+    .route-arrow { font-size: 18px; color: #C9A66B; }
     .flight-meta { display: flex; gap: 12px; font-size: 12px; color: #666; margin-bottom: 6px; flex-wrap: wrap; }
     .flight-meta span { display: flex; align-items: center; gap: 4px; }
-    .flight-meta mat-icon { font-size: 14px; width: 14px; height: 14px; color: #0A0F2E; }
+    .flight-meta mat-icon { font-size: 14px; width: 14px; height: 14px; color: #1B2A5C; }
     .jet-row { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #555; }
-    .jet-row mat-icon { font-size: 16px; width: 16px; height: 16px; color: #0A0F2E; }
+    .jet-row mat-icon { font-size: 16px; width: 16px; height: 16px; color: #1B2A5C; }
     .flight-actions { display: flex; justify-content: space-between; align-items: center; padding: 4px 8px 12px; }
-    .book-btn-small { background: #0A0F2E !important; color: #FFB800 !important; font-weight: 700 !important; border-radius: 6px !important; }
+    .book-btn-small { background: #1B2A5C !important; color: #C9A66B !important; font-weight: 700 !important; border-radius: 6px !important; }
     .view-all-wrap { text-align: center; margin-top: 40px; }
-    .view-all-btn { color: #0A0F2E !important; border-color: #0A0F2E !important; font-weight: 700; font-size: 15px; padding: 8px 28px; border-radius: 8px !important; }
+    .view-all-btn { color: #1B2A5C !important; border-color: #1B2A5C !important; font-weight: 700; font-size: 15px; padding: 8px 28px; border-radius: 8px !important; }
     .view-all-btn mat-icon { vertical-align: middle; }
 
     /* ── Loading / Empty ───────────────────────────────────────────────────── */
@@ -350,10 +350,13 @@ import { EmptyLegDto } from '../../core/models/models';
     .empty-state mat-icon { font-size: 56px; width: 56px; height: 56px; display: block; margin: 0 auto 12px; }
 
     /* ── Footer ───────────────────────────────────────────────────────────── */
-    .footer { background: #0A0F2E; padding: 28px 24px; }
+    .footer { background: #1B2A5C; padding: 28px 24px; }
     .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-brand { display: flex; align-items: center; gap: 10px; }
+    .footer-brand { display: flex; align-items: center; gap: 12px; }
+    .footer-logo-img { height: 40px; width: auto; border-radius: 6px; background: white; padding: 2px; }
+    .footer-brand-text { display: flex; flex-direction: column; line-height: 1.05; }
     .footer-logo-text { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 900; color: white; }
+    .footer-logo-tagline { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; color: #C9A66B; letter-spacing: 0.3px; margin-top: 1px; }
     .footer-copy { color: rgba(255,255,255,0.4); font-size: 13px; margin: 0; }
 
     @media (max-width: 768px) {

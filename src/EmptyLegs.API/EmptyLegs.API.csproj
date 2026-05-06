@@ -20,7 +20,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyName>JetFlux</AssemblyName>
+    <AssemblyName>PearlSky</AssemblyName>
     <RootNamespace>EmptyLegs.API</RootNamespace>
   </PropertyGroup>
 

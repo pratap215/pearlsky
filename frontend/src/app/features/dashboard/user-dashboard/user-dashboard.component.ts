@@ -116,9 +116,9 @@ import {
           </mat-tab-group>
 
           <!-- Booking Detail Panel -->
-          <div *ngIf="selectedBooking" class="booking-detail-panel" style="margin-top:16px;background:white;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.1);padding:24px;border-left:4px solid #1a237e">
+          <div *ngIf="selectedBooking" class="booking-detail-panel" style="margin-top:16px;background:white;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.1);padding:24px;border-left:4px solid #1B2A5C">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
-              <h3 style="font-size:16px;font-weight:700;color:#1a237e">Booking — {{selectedBooking.bookingRef}}</h3>
+              <h3 style="font-size:16px;font-weight:700;color:#1B2A5C">Booking — {{selectedBooking.bookingRef}}</h3>
               <button mat-icon-button (click)="selectedBooking = null"><mat-icon>close</mat-icon></button>
             </div>
             <div style="display:grid;gap:8px">
@@ -130,10 +130,10 @@ import {
               <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:14px"><span style="font-weight:600;color:#555">Base Fare</span><span>₹{{selectedBooking.baseAmount | number:'1.0-0'}}</span></div>
               <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:14px"><span style="font-weight:600;color:#555">Tax (18% GST)</span><span>₹{{selectedBooking.taxAmount | number:'1.0-0'}}</span></div>
               <div *ngIf="selectedBooking.discountAmount > 0" style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:14px;color:#2e7d32"><span style="font-weight:600">Discount</span><span>-₹{{selectedBooking.discountAmount | number:'1.0-0'}}</span></div>
-              <div style="display:flex;justify-content:space-between;padding:12px 0;font-size:16px;font-weight:700;color:#1a237e;border-top:2px solid #e0e0e0"><span>Total Paid</span><span>₹{{selectedBooking.totalAmount | number:'1.0-0'}}</span></div>
+              <div style="display:flex;justify-content:space-between;padding:12px 0;font-size:16px;font-weight:700;color:#1B2A5C;border-top:2px solid #e0e0e0"><span>Total Paid</span><span>₹{{selectedBooking.totalAmount | number:'1.0-0'}}</span></div>
             </div>
             <div *ngIf="selectedBooking.passengers?.length" style="margin-top:16px">
-              <h4 style="color:#1a237e;margin-bottom:8px;font-size:14px;font-weight:600">Passengers ({{selectedBooking.passengerCount}})</h4>
+              <h4 style="color:#1B2A5C;margin-bottom:8px;font-size:14px;font-weight:600">Passengers ({{selectedBooking.passengerCount}})</h4>
               <div *ngFor="let p of selectedBooking.passengers; let i = index" style="padding:8px 12px;background:#f5f7fa;border-radius:8px;margin-bottom:6px;font-size:13px">
                 <strong>{{i+1}}. {{p.firstName}} {{p.lastName}}</strong> &nbsp;|&nbsp; Passport: {{p.passportNumber}} &nbsp;|&nbsp; {{p.nationality}}
               </div>
@@ -235,7 +235,7 @@ import {
                 <div class="balance-hint">Earn credits by referring friends or completing bookings</div>
               </mat-card-content>
             </mat-card>
-            <h3 style="margin: 20px 0 12px; color: #1a237e">Transaction History</h3>
+            <h3 style="margin: 20px 0 12px; color: #1B2A5C">Transaction History</h3>
             <div class="mat-table-container">
               <table mat-table [dataSource]="credits.transactions">
                 <ng-container matColumnDef="date"><th mat-header-cell *matHeaderCellDef>Date</th><td mat-cell *matCellDef="let t">{{t.createdAt | date:'MMM d, y'}}</td></ng-container>
@@ -317,17 +317,17 @@ import {
   styles: [`
     .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px; }
     .stat-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; }
-    .stat-value { font-size: 28px; font-weight: 700; color: #1a237e; }
+    .stat-value { font-size: 28px; font-weight: 700; color: #1B2A5C; }
     .stat-label { font-size: 13px; color: #666; margin-top: 4px; }
-    .stat-icon { color: #1a237e; opacity: 0.2; font-size: 36px; width: 36px; height: 36px; display: block; margin: 0 auto 8px; }
+    .stat-icon { color: #1B2A5C; opacity: 0.2; font-size: 36px; width: 36px; height: 36px; display: block; margin: 0 auto 8px; }
     .mat-table-container { overflow-x: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-top: 16px; }
     table { width: 100%; }
     .fav-card { margin-bottom: 12px; border-radius: 8px !important; }
-    .fav-route { font-size: 18px; font-weight: 700; color: #1a237e; }
+    .fav-route { font-size: 18px; font-weight: 700; color: #1B2A5C; }
     .fav-cities { font-size: 13px; color: #888; }
     .fav-meta { font-size: 13px; color: #444; margin-top: 4px; }
     .add-search-form { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; background: white; padding: 16px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-    .referral-code-card { border-radius: 12px !important; background: linear-gradient(135deg, #1a237e, #283593) !important; color: white !important; text-align: center; }
+    .referral-code-card { border-radius: 12px !important; background: linear-gradient(135deg, #1B2A5C, #2A3D75) !important; color: white !important; text-align: center; }
     .ref-code-label { font-size: 14px; opacity: 0.8; margin-bottom: 8px; }
     .ref-code { font-size: 32px; font-weight: 800; letter-spacing: 4px; margin-bottom: 16px; }
     .credit-balance-card { border-radius: 12px !important; background: linear-gradient(135deg, #1b5e20, #2e7d32) !important; color: white !important; text-align: center; padding: 8px; }
@@ -339,23 +339,23 @@ import {
     .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
     .notif-list { display: flex; flex-direction: column; gap: 8px; }
     .notif-row { display: flex; align-items: flex-start; gap: 12px; background: white; border-radius: 8px; padding: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
-    .notif-row.unread { background: #e8eaf6; border-left: 3px solid #1a237e; }
+    .notif-row.unread { background: #e8eaf6; border-left: 3px solid #1B2A5C; }
     .notif-body { flex: 1; }
     .notif-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
     .notif-msg { font-size: 13px; color: #666; }
     .notif-time { font-size: 11px; color: #999; white-space: nowrap; }
-    .notif-booking { color: #1a237e; }
+    .notif-booking { color: #1B2A5C; }
     .notif-payment { color: #2e7d32; }
     .notif-system { color: #555; }
     .flight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
-    .page-title { font-size: 22px; font-weight: 700; color: #1a237e; margin-bottom: 20px; }
+    .page-title { font-size: 22px; font-weight: 700; color: #1B2A5C; margin-bottom: 20px; }
     .subs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
     .sub-card { border-radius: 12px !important; overflow: hidden; }
-    .sub-img-wrap { height: 130px; overflow: hidden; background: linear-gradient(135deg, #0A0F2E, #1a237e); }
+    .sub-img-wrap { height: 130px; overflow: hidden; background: linear-gradient(135deg, #1B2A5C, #1B2A5C); }
     .sub-img { width: 100%; height: 100%; object-fit: cover; }
     .sub-img-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
     .sub-img-placeholder mat-icon { font-size: 48px; width: 48px; height: 48px; color: rgba(255,255,255,0.2); }
-    .sub-model { font-size: 15px; font-weight: 700; color: #0A0F2E; }
+    .sub-model { font-size: 15px; font-weight: 700; color: #1B2A5C; }
     .sub-tail { font-size: 13px; color: #888; margin-top: 2px; }
     .sub-since { font-size: 12px; color: #aaa; margin-top: 6px; }
   `]

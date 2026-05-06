@@ -182,39 +182,39 @@ import { EmptyLegDetailDto } from '../../../core/models/models';
     .detail-page { padding: 24px; }
     .back-bar { margin-bottom: 16px; }
     .detail-layout { display: grid; grid-template-columns: 1fr 380px; gap: 24px; align-items: start; }
-    .gallery { border-radius: 12px; overflow: hidden; margin-bottom: 20px; background: linear-gradient(135deg, #1a237e, #283593); }
+    .gallery { border-radius: 12px; overflow: hidden; margin-bottom: 20px; background: linear-gradient(135deg, #1B2A5C, #2A3D75); }
     .gallery-main { height: 340px; position: relative; }
     .main-img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
     .main-img-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
     .main-img-fallback mat-icon { font-size: 80px; width: 80px; height: 80px; color: rgba(255,255,255,0.2); }
     .gallery-thumbs { display: flex; gap: 8px; padding: 8px; background: #f5f5f5; }
     .thumb-wrap { width: 80px; height: 60px; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; }
-    .thumb-wrap.active { border-color: #1a237e; }
+    .thumb-wrap.active { border-color: #1B2A5C; }
     .thumb-img { width: 100%; height: 100%; object-fit: cover; }
     .detail-card { border-radius: 12px !important; margin-bottom: 20px; }
     .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
     .spec-item { display: flex; flex-direction: column; }
     .spec-label { font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
-    .spec-val { font-size: 15px; font-weight: 600; color: #1a237e; margin-top: 4px; }
+    .spec-val { font-size: 15px; font-weight: 600; color: #1B2A5C; margin-top: 4px; }
     .amenities-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
     .chip-wifi, .chip-catering, .chip-bedroom { display: flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 10px; font-size: 12px; }
     .description { font-size: 14px; color: #555; line-height: 1.6; margin-top: 12px; }
     .operator-row { display: flex; align-items: center; gap: 12px; }
-    .operator-row mat-icon { color: #1a237e; font-size: 28px; width: 28px; height: 28px; }
-    .op-name { font-size: 15px; font-weight: 600; color: #1a237e; }
+    .operator-row mat-icon { color: #1B2A5C; font-size: 28px; width: 28px; height: 28px; }
+    .op-name { font-size: 15px; font-weight: 600; color: #1B2A5C; }
     .op-sub { font-size: 12px; color: #888; }
     .booking-card { border-radius: 12px !important; position: sticky; top: 80px; }
     .book-route { display: flex; align-items: center; gap: 12px; justify-content: center; margin-bottom: 4px; }
-    .book-iata { font-size: 28px; font-weight: 800; color: #1a237e; }
+    .book-iata { font-size: 28px; font-weight: 800; color: #1B2A5C; }
     .book-arrow { font-size: 24px; color: #ffc107; transform: rotate(0deg); }
     .book-cities { text-align: center; font-size: 13px; color: #888; margin-bottom: 12px; }
     .book-date, .book-duration { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #444; margin-bottom: 8px; }
-    .book-date mat-icon, .book-duration mat-icon { color: #1a237e; font-size: 18px; width: 18px; height: 18px; }
+    .book-date mat-icon, .book-duration mat-icon { color: #1B2A5C; font-size: 18px; width: 18px; height: 18px; }
     .price-section { margin: 12px 0; }
     .price-row2 { display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px; color: #555; }
-    .price-row2.total { font-size: 18px; font-weight: 700; color: #1a237e; border-top: 2px solid #e0e0e0; margin-top: 8px; padding-top: 12px; }
+    .price-row2.total { font-size: 18px; font-weight: 700; color: #1B2A5C; border-top: 2px solid #e0e0e0; margin-top: 8px; padding-top: 12px; }
     .book-seats { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #444; margin: 12px 0 8px; }
-    .charter-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #1a237e; background: #e8eaf6; padding: 6px 12px; border-radius: 6px; margin-bottom: 12px; font-weight: 600; }
+    .charter-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #1B2A5C; background: #e8eaf6; padding: 6px 12px; border-radius: 6px; margin-bottom: 12px; font-weight: 600; }
     .charter-badge mat-icon { font-size: 14px; width: 14px; height: 14px; }
     .confirm-mode { margin-bottom: 16px; }
     .confirm-badge { display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
@@ -222,7 +222,7 @@ import { EmptyLegDetailDto } from '../../../core/models/models';
     .confirm-approval { color: #0d47a1; background: #bbdefb; }
     .book-btn { width: 100%; height: 52px; font-size: 16px; font-weight: 700; margin-bottom: 10px; }
     .fav-btn, .share-btn, .sub-btn { width: 100%; margin-bottom: 8px; }
-    .sub-btn { border-color: #0A0F2E !important; color: #0A0F2E !important; }
+    .sub-btn { border-color: #1B2A5C !important; color: #1B2A5C !important; }
     .sub-btn.subscribed { border-color: #2e7d32 !important; color: #2e7d32 !important; background: #e8f5e9 !important; }
     @media (max-width: 900px) {
       .detail-layout { grid-template-columns: 1fr; }

@@ -278,28 +278,28 @@ import { EmptyLegDetailDto, BookingLockResponse, PassengerDto } from '../../../c
   `,
   styles: [`
     .booking-container { max-width: 800px; margin: 0 auto; padding: 32px 16px; }
-    .page-title { display: flex; align-items: center; gap: 8px; font-size: 24px; font-weight: 700; color: #1a237e; margin-bottom: 24px; }
+    .page-title { display: flex; align-items: center; gap: 8px; font-size: 24px; font-weight: 700; color: #1B2A5C; margin-bottom: 24px; }
     .lock-timer { background: #fff3e0; border: 1px solid #ff9800; border-radius: 8px; padding: 12px 20px; display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
     .lock-timer.warning { background: #ffebee; border-color: #f44336; }
     .lock-timer mat-icon { color: #e65100; }
     .timer-text { font-size: 16px; font-weight: 700; color: #e65100; margin-bottom: 4px; }
     .step-content { padding: 24px 0; }
     .flight-summary-card { border-radius: 12px !important; }
-    .sum-route { display: flex; align-items: center; gap: 12px; font-size: 28px; font-weight: 800; color: #1a237e; margin-bottom: 4px; }
+    .sum-route { display: flex; align-items: center; gap: 12px; font-size: 28px; font-weight: 800; color: #1B2A5C; margin-bottom: 4px; }
     .sum-iata { font-size: 28px; font-weight: 800; }
     .sum-cities { color: #888; font-size: 14px; margin-bottom: 12px; }
     .sum-meta { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: #444; margin-bottom: 16px; }
     .sum-meta span { display: flex; align-items: center; gap: 4px; }
-    .sum-meta mat-icon { font-size: 15px; width: 15px; height: 15px; color: #1a237e; }
+    .sum-meta mat-icon { font-size: 15px; width: 15px; height: 15px; color: #1B2A5C; }
     .seat-selector { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
     .seat-btns { display: flex; align-items: center; gap: 12px; }
-    .seat-count { font-size: 20px; font-weight: 700; color: #1a237e; min-width: 24px; text-align: center; }
+    .seat-count { font-size: 20px; font-weight: 700; color: #1B2A5C; min-width: 24px; text-align: center; }
     .seat-avail { font-size: 12px; color: #888; }
     .sum-price { display: flex; align-items: center; gap: 12px; font-size: 15px; }
-    .sum-price strong { font-size: 20px; color: #1a237e; }
+    .sum-price strong { font-size: 20px; color: #1B2A5C; }
     .step-actions { display: flex; gap: 12px; margin-top: 24px; }
     .passenger-form { margin-bottom: 16px; }
-    .passenger-form h4 { font-size: 15px; font-weight: 600; color: #1a237e; margin-bottom: 12px; }
+    .passenger-form h4 { font-size: 15px; font-weight: 600; color: #1B2A5C; margin-bottom: 12px; }
     .pax-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
     .coupon-section { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
     .coupon-field { flex: 1; }
@@ -307,23 +307,23 @@ import { EmptyLegDetailDto, BookingLockResponse, PassengerDto } from '../../../c
     .coupon-msg.success { background: #e8f5e9; color: #2e7d32; }
     .coupon-msg.error { background: #ffebee; color: #b71c1c; }
     .credits-section { margin-bottom: 16px; }
-    .credits-section h4 { font-size: 14px; font-weight: 600; margin-bottom: 8px; color: #1a237e; }
+    .credits-section h4 { font-size: 14px; font-weight: 600; margin-bottom: 8px; color: #1B2A5C; }
     .credits-slider { width: 100%; }
     .credits-display { font-size: 13px; color: #555; margin-top: 4px; }
     .price-breakdown { background: #f9f9fb; border-radius: 8px; padding: 16px; margin: 16px 0; }
     .price-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px; color: #555; }
     .price-row.discount { color: #2e7d32; }
-    .price-row.total { font-size: 18px; font-weight: 700; color: #1a237e; border-top: 2px solid #e0e0e0; margin-top: 8px; padding-top: 12px; }
+    .price-row.total { font-size: 18px; font-weight: 700; color: #1B2A5C; border-top: 2px solid #e0e0e0; margin-top: 8px; padding-top: 12px; }
     .policy-text { background: #f5f7fa; border-radius: 8px; padding: 16px; margin-bottom: 16px; font-size: 14px; color: #444; line-height: 1.6; }
-    .policy-text h4 { font-size: 14px; font-weight: 700; color: #1a237e; margin-bottom: 4px; margin-top: 12px; }
-    .credit-card { width: 100%; max-width: 380px; height: 220px; background: linear-gradient(135deg, #1a237e, #283593 50%, #0d47a1); border-radius: 16px; padding: 24px; color: white; position: relative; box-shadow: 0 8px 32px rgba(26,35,126,0.4); margin: 0 auto 24px; }
+    .policy-text h4 { font-size: 14px; font-weight: 700; color: #1B2A5C; margin-bottom: 4px; margin-top: 12px; }
+    .credit-card { width: 100%; max-width: 380px; height: 220px; background: linear-gradient(135deg, #1B2A5C, #2A3D75 50%, #0d47a1); border-radius: 16px; padding: 24px; color: white; position: relative; box-shadow: 0 8px 32px rgba(26,35,126,0.4); margin: 0 auto 24px; }
     .card-chip { width: 40px; height: 30px; background: #ffd54f; border-radius: 4px; margin-bottom: 24px; }
     .card-number { font-size: 20px; letter-spacing: 3px; margin-bottom: 20px; font-family: monospace; }
     .card-info { display: flex; justify-content: space-between; font-size: 13px; opacity: 0.8; }
     .payment-form { max-width: 400px; }
     .full-width { width: 100%; }
     .card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .payment-total { font-size: 20px; font-weight: 700; color: #1a237e; margin: 16px 0; }
+    .payment-total { font-size: 20px; font-weight: 700; color: #1B2A5C; margin: 16px 0; }
     .payment-actions { display: flex; gap: 12px; margin-bottom: 16px; }
     .pay-btn { height: 52px; font-size: 16px; font-weight: 700; padding: 0 32px; }
     .charter-note { display: flex; align-items: flex-start; gap: 8px; background: #e8f4fd; border-radius: 8px; padding: 12px 16px; margin: 16px 0 8px; font-size: 13px; color: #0d47a1; }
@@ -331,7 +331,7 @@ import { EmptyLegDetailDto, BookingLockResponse, PassengerDto } from '../../../c
     .charter-price { background: #f8f9ff; border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
     .charter-price .price-row { display: flex; justify-content: space-between; padding: 5px 0; font-size: 14px; color: #555; border-bottom: 1px solid #eee; }
     .charter-price .price-row:last-child { border-bottom: none; }
-    .charter-price .price-row.total { font-size: 16px; font-weight: 700; color: #1a237e; padding-top: 10px; margin-top: 4px; }
+    .charter-price .price-row.total { font-size: 16px; font-weight: 700; color: #1B2A5C; padding-top: 10px; margin-top: 4px; }
     .passengers-input { display: flex; align-items: center; gap: 12px; margin: 12px 0; font-size: 14px; }
   `]
 })

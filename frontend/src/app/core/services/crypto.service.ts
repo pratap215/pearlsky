@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 // 32-byte key for AES-GCM
-const KEY_MATERIAL = 'JetFlux-Search-Key-2026!@#$%^&*(';
+const KEY_MATERIAL = 'PearlSky-Search-Key-2026!@#$%^&*(';
 
 @Injectable({ providedIn: 'root' })
 export class CryptoService {

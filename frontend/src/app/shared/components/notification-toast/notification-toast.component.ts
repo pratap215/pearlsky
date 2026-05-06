@@ -68,7 +68,7 @@ interface ToastItem { id: number; notif: NotificationDto; timer?: ReturnType<typ
       padding: 14px 10px 14px 16px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.4);
       cursor: pointer;
-      border-left: 4px solid #FFB800;
+      border-left: 4px solid #C9A66B;
       pointer-events: all;
       transition: transform .15s ease, box-shadow .15s ease;
       min-width: 300px;
@@ -77,7 +77,7 @@ interface ToastItem { id: number; notif: NotificationDto; timer?: ReturnType<typ
     .toast-type-confirmed { border-left-color: #4caf50; }
     .toast-type-rejected  { border-left-color: #ef5350; }
     .toast-type-payment   { border-left-color: #42a5f5; }
-    .toast-type-flight    { border-left-color: #FFB800; }
+    .toast-type-flight    { border-left-color: #C9A66B; }
     .toast-type-default   { border-left-color: #90a4ae; }
 
     .toast-icon mat-icon {
@@ -85,7 +85,7 @@ interface ToastItem { id: number; notif: NotificationDto; timer?: ReturnType<typ
       width: 24px;
       height: 24px;
       margin-top: 1px;
-      color: #FFB800;
+      color: #C9A66B;
     }
     .toast-type-confirmed .toast-icon mat-icon { color: #81c784; }
     .toast-type-rejected  .toast-icon mat-icon { color: #ef9a9a; }

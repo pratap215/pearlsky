@@ -1,11 +1,11 @@
 @echo off
-title JetFlux - Deploy to Render.com
+title PearlSky - Deploy to Render.com
 color 0B
 cls
 
 echo.
 echo  =========================================================
-echo    JetFlux - Deploy to Render.com (Free Hosting)
+echo    PearlSky - Deploy to Render.com (Free Hosting)
 echo  =========================================================
 echo.
 
@@ -25,10 +25,10 @@ echo.
 echo  BEFORE RUNNING THIS SCRIPT:
 echo  ─────────────────────────────────────────────────────────
 echo   1. Create a FREE account at: https://github.com
-echo   2. Create a NEW repository named: jetflux
+echo   2. Create a NEW repository named: pearlsky
 echo      (go to github.com/new)
 echo   3. Copy your repo URL, e.g.:
-echo      https://github.com/YOUR_USERNAME/jetflux.git
+echo      https://github.com/YOUR_USERNAME/pearlsky.git
 echo  ─────────────────────────────────────────────────────────
 echo.
 set /p REPO_URL="  Paste your GitHub repo URL here: "
@@ -42,7 +42,7 @@ echo.
 echo  [1/4] Initializing Git repository...
 git init
 git add .
-git commit -m "Initial commit: JetFlux application" --allow-empty
+git commit -m "Initial commit: PearlSky application" --allow-empty
 
 echo.
 echo  [2/4] Setting remote origin...
@@ -74,10 +74,10 @@ echo   1. Go to: https://render.com  (create free account)
 echo.
 echo   2. Click "New +" → "Web Service"
 echo.
-echo   3. Connect GitHub → select your "jetflux" repository
+echo   3. Connect GitHub → select your "pearlsky" repository
 echo.
 echo   4. Fill in settings:
-echo        Name     : jetflux
+echo        Name     : pearlsky
 echo        Runtime  : Docker
 echo        Branch   : main
 echo        Plan     : Free
@@ -87,7 +87,7 @@ echo.
 echo   6. Wait 5-10 minutes for first build to complete
 echo.
 echo   7. Your app will be live at:
-echo      https://jetflux.onrender.com
+echo      https://pearlsky.onrender.com
 echo.
 echo  ─────────────────────────────────────────────────────────
 echo   NOTE: Free tier SLEEPS after 15 min of inactivity.

@@ -173,12 +173,12 @@ import { EmptyLegDto, PagedResult } from '../../../core/models/models';
     .filter-field-sm { min-width: 130px; }
     .results-area { padding: 24px 24px; }
     .results-header { margin-bottom: 16px; }
-    .results-title { display: flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 700; color: #1a237e; }
+    .results-title { display: flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 700; color: #1B2A5C; }
     .flight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
     .flight-card-item { border-radius: 12px !important; overflow: hidden; transition: transform 0.2s; }
     .flight-card-item:hover { transform: translateY(-3px); }
     .flight-card-item.blocked { opacity: 0.75; }
-    .fcard-img { position: relative; height: 160px; overflow: hidden; background: linear-gradient(135deg, #1a237e, #283593); }
+    .fcard-img { position: relative; height: 160px; overflow: hidden; background: linear-gradient(135deg, #1B2A5C, #2A3D75); }
     .fcard-photo { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
     .fcard-img-placeholder { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
     .fcard-img-placeholder mat-icon { font-size: 64px; width: 64px; height: 64px; color: rgba(255,255,255,0.2); }
@@ -187,20 +187,20 @@ import { EmptyLegDto, PagedResult } from '../../../core/models/models';
     .confirm-badge { }
     .fcard-body { padding: 12px 16px 4px; }
     .fcard-route { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
-    .fcard-iata { font-size: 20px; font-weight: 800; color: #1a237e; }
+    .fcard-iata { font-size: 20px; font-weight: 800; color: #1B2A5C; }
     .fcard-arrow { color: #ffc107; }
     .fcard-cities { font-size: 11px; color: #888; margin-bottom: 8px; }
     .fcard-meta { display: flex; gap: 12px; font-size: 11px; color: #555; margin-bottom: 6px; }
     .fcard-meta span { display: flex; align-items: center; gap: 3px; }
     .fcard-meta mat-icon { font-size: 13px; width: 13px; height: 13px; }
     .fcard-aircraft { display: flex; align-items: center; gap: 4px; font-size: 12px; color: #444; margin-bottom: 6px; }
-    .fcard-aircraft mat-icon { font-size: 14px; width: 14px; height: 14px; color: #1a237e; }
-    .cat-chip { background: #e8eaf6; color: #1a237e; font-size: 10px; padding: 2px 6px; border-radius: 8px; margin-left: 4px; }
+    .fcard-aircraft mat-icon { font-size: 14px; width: 14px; height: 14px; color: #1B2A5C; }
+    .cat-chip { background: #e8eaf6; color: #1B2A5C; font-size: 10px; padding: 2px 6px; border-radius: 8px; margin-left: 4px; }
     .fcard-amenities { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 6px; }
     .fcard-seats { font-size: 11px; color: #666; display: flex; align-items: center; gap: 4px; margin-bottom: 8px; }
     .fcard-seats mat-icon { font-size: 13px; width: 13px; height: 13px; }
     .fcard-price { display: flex; align-items: baseline; gap: 8px; }
-    .fcard-price-main { font-size: 20px; font-weight: 700; color: #1a237e; }
+    .fcard-price-main { font-size: 20px; font-weight: 700; color: #1B2A5C; }
     .fcard-price-tax { font-size: 11px; color: #999; }
     .fcard-actions { padding: 8px 8px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #f0f0f0; }
     .paginator { margin-top: 24px; }

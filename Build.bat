@@ -1,11 +1,11 @@
 @echo off
-title JetFlux Build Script
+title PearlSky Build Script
 color 0B
 cls
 
 echo.
 echo  =========================================================
-echo    JetFlux Build Script
+echo    PearlSky Build Script
 echo    Fly Exclusive. Pay Smart.
 echo  =========================================================
 echo.
@@ -27,9 +27,9 @@ if %errorlevel% NEQ 0 (
 echo  [OK]  .NET and Node.js found.
 echo.
 
-REM ── Stop any running JetFlux instance ───────────────────────
-echo  [STOP] Stopping any running JetFlux processes...
-powershell -Command "Get-Process -Name JetFlux,dotnet -ErrorAction SilentlyContinue | Stop-Process -Force" >nul 2>&1
+REM ── Stop any running PearlSky instance ───────────────────────
+echo  [STOP] Stopping any running PearlSky processes...
+powershell -Command "Get-Process -Name PearlSky,dotnet -ErrorAction SilentlyContinue | Stop-Process -Force" >nul 2>&1
 timeout /t 2 /nobreak >nul
 
 REM ── Install frontend dependencies if needed ─────────────────
@@ -55,8 +55,8 @@ echo.
 
 REM ── Publish .NET API (self-contained, win-x64) ──────────────
 echo  [2/3] Publishing .NET API as self-contained executable...
-if exist "dist\JetFlux" rmdir /s /q "dist\JetFlux"
-dotnet publish src\EmptyLegs.API\EmptyLegs.API.csproj -c Release -r win-x64 --self-contained true -o dist\JetFlux
+if exist "dist\PearlSky" rmdir /s /q "dist\PearlSky"
+dotnet publish src\EmptyLegs.API\EmptyLegs.API.csproj -c Release -r win-x64 --self-contained true -o dist\PearlSky
 if %errorlevel% NEQ 0 (
     echo  [ERROR] .NET publish failed.
     pause & exit /b 1
@@ -66,8 +66,8 @@ echo.
 
 REM ── Copy launch scripts into dist ───────────────────────────
 echo  [3/3] Copying launch scripts...
-copy /Y "%~dp0dist\START_JETFLUX.bat" "%~dp0dist\JetFlux\START_JETFLUX.bat" >nul 2>&1
-copy /Y "%~dp0dist\STOP_JETFLUX.bat" "%~dp0dist\JetFlux\STOP_JETFLUX.bat" >nul 2>&1
+copy /Y "%~dp0dist\START_PEARLSKY.bat" "%~dp0dist\PearlSky\START_PEARLSKY.bat" >nul 2>&1
+copy /Y "%~dp0dist\STOP_PEARLSKY.bat" "%~dp0dist\PearlSky\STOP_PEARLSKY.bat" >nul 2>&1
 echo  [OK]  Launch scripts ready.
 echo.
 
@@ -75,18 +75,18 @@ REM ── Summary ────────────────────�
 echo  =========================================================
 echo    BUILD SUCCESSFUL!
 echo.
-echo    Distribution folder: %~dp0dist\JetFlux\
+echo    Distribution folder: %~dp0dist\PearlSky\
 echo.
-echo    To run JetFlux:
-echo      Double-click:  dist\JetFlux\START_JETFLUX.bat
+echo    To run PearlSky:
+echo      Double-click:  dist\PearlSky\START_PEARLSKY.bat
 echo.
-echo    Contents of dist\JetFlux\:
-echo      JetFlux.exe          Server (API + Angular SPA bundled)
+echo    Contents of dist\PearlSky\:
+echo      PearlSky.exe          Server (API + Angular SPA bundled)
 echo      appsettings.json     Configuration
 echo      seed-data\           Initial database seed files
 echo      wwwroot\browser\     Angular SPA (pre-built)
-echo      START_JETFLUX.bat    Launch script (starts server + Chrome)
-echo      STOP_JETFLUX.bat     Stop the server
+echo      START_PEARLSKY.bat    Launch script (starts server + Chrome)
+echo      STOP_PEARLSKY.bat     Stop the server
 echo  =========================================================
 echo.
 pause

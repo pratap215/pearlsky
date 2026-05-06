@@ -1,0 +1,13 @@
+Email					Password				Role	
+====================================================================================
+admin@pearlsky.com		Admin@123		SuperAdmin	
+operator1@pearlsky.com	Operator@123	OperatorAdmin → IndiaJet Charters Pvt. Ltd.
+operator2@pearlsky.com	Operator@123	OperatorAdmin → SkyLux Aviation
+operator3@pearlsky.com	Operator@123	OperatorAdmin → AirElite Services	
+operator4@pearlsky.com	Operator@123	OperatorAdmin → Royal Wings Aviation	
+operator5@pearlsky.com	Operator@123	OperatorAdmin → Premier Air Solutions	
+user1@pearlsky.com		User@123		User	
+user2@pearlsky.com		User@123		User	
+user3@pearlsky.com		User@123		User	
+user4@pearlsky.com		User@123		User	
+user5@pearlsky.com		User@123		User

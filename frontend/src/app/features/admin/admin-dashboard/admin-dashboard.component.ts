@@ -56,7 +56,7 @@ import { AdminDashboardDto, OperatorListDto, BookingDto, CouponDto, CreateCoupon
             <div class="stat-card"><mat-icon class="stat-icon">trending_up</mat-icon><div class="stat-value">₹{{(dashboard.monthlyRevenue || 0) | number:'1.0-0'}}</div><div class="stat-label">Monthly Revenue</div></div>
           </div>
           <div *ngIf="!isLoadingDash && dashboard?.recentBookings?.length" class="mat-table-container">
-            <h3 style="padding:16px;margin:0;color:#1a237e">Recent Bookings</h3>
+            <h3 style="padding:16px;margin:0;color:#1B2A5C">Recent Bookings</h3>
             <table mat-table [dataSource]="dashboard!.recentBookings">
               <ng-container matColumnDef="ref"><th mat-header-cell *matHeaderCellDef>Ref</th><td mat-cell *matCellDef="let b">{{b.bookingRef}}</td></ng-container>
               <ng-container matColumnDef="operator"><th mat-header-cell *matHeaderCellDef>Operator</th><td mat-cell *matCellDef="let b">{{b.operatorName}}</td></ng-container>
@@ -192,13 +192,13 @@ import { AdminDashboardDto, OperatorListDto, BookingDto, CouponDto, CreateCoupon
   styles: [`
     .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 24px; }
     .stat-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; }
-    .stat-value { font-size: 26px; font-weight: 700; color: #1a237e; }
+    .stat-value { font-size: 26px; font-weight: 700; color: #1B2A5C; }
     .stat-label { font-size: 12px; color: #666; margin-top: 4px; }
-    .stat-icon { color: #1a237e; opacity: 0.2; font-size: 32px; width: 32px; height: 32px; display: block; margin: 0 auto 8px; }
+    .stat-icon { color: #1B2A5C; opacity: 0.2; font-size: 32px; width: 32px; height: 32px; display: block; margin: 0 auto 8px; }
     .mat-table-container { overflow-x: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
     table { width: 100%; }
     .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-    .page-title { font-size: 22px; font-weight: 700; color: #1a237e; margin-bottom: 20px; }
+    .page-title { font-size: 22px; font-weight: 700; color: #1B2A5C; margin-bottom: 20px; }
     .coupon-form-card { border-radius: 12px !important; margin-bottom: 16px; }
     .coupon-form { }
     .form-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 4px; }

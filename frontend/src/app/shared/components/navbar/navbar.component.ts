@@ -28,13 +28,13 @@ import { NotificationDetailDialogComponent } from '../notification-detail-dialog
   template: `
     <mat-toolbar class="navbar">
       <div class="page-container nav-inner">
-        <!-- JetFlux Logo -->
-        <a routerLink="/" class="logo">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="18" cy="18" r="18" fill="#FFB800"/>
-            <path d="M9 23 L15 9 L20 16 L27 11 L23 27 L17 20 Z" fill="#0A0F2E"/>
-          </svg>
-          <span class="logo-text">Jet<span class="logo-accent">Flux</span></span>
+        <!-- PearlSky Logo -->
+        <a routerLink="/" class="logo" title="PearlSky — Discover the Hidden Sky Gems">
+          <img src="logo.jpeg" alt="PearlSky" class="logo-img">
+          <div class="logo-text-wrap">
+            <span class="logo-text">PearlSky</span>
+            <span class="logo-tagline">Discover the Hidden Sky Gems</span>
+          </div>
         </a>
 
         <div class="nav-links">
@@ -126,32 +126,49 @@ import { NotificationDetailDialogComponent } from '../notification-detail-dialog
   `,
   styles: [`
     .navbar {
-      background: #0A0F2E;
+      background: #1B2A5C;
       color: white;
       position: sticky;
       top: 0;
       z-index: 1000;
       padding: 0;
       box-shadow: 0 2px 16px rgba(0,0,0,0.5);
-      border-bottom: 1px solid rgba(255,184,0,0.15);
+      border-bottom: 1px solid rgba(201,166,107,0.15);
     }
     .nav-inner { display: flex; align-items: center; width: 100%; gap: 0; }
 
     /* Logo */
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: white; flex-shrink: 0; }
+    .logo-img {
+      height: 42px;
+      width: auto;
+      border-radius: 6px;
+      background: white;
+      padding: 2px;
+      object-fit: contain;
+    }
+    .logo-text-wrap { display: flex; flex-direction: column; line-height: 1.05; }
     .logo-text {
       font-family: 'Montserrat', sans-serif;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 900;
       letter-spacing: -0.5px;
       color: white;
     }
-    .logo-accent { color: #FFB800; }
+    .logo-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      color: #C9A66B;
+      margin-top: 1px;
+    }
+    @media (max-width: 540px) { .logo-tagline { display: none; } }
 
     /* Nav Links */
     .nav-links { flex: 1; margin-left: 28px; }
     .nav-link { color: rgba(255,255,255,0.75) !important; font-weight: 500; letter-spacing: 0.3px; }
-    .nav-link:hover { color: #FFB800 !important; }
+    .nav-link:hover { color: #C9A66B !important; }
     .nav-link mat-icon { font-size: 18px; width: 18px; height: 18px; margin-right: 4px; vertical-align: middle; }
 
     /* Actions */
@@ -161,7 +178,7 @@ import { NotificationDetailDialogComponent } from '../notification-detail-dialog
     .user-btn { display: flex; align-items: center; gap: 6px; }
     .user-name { font-weight: 600; font-size: 14px; }
     .guest-link { color: rgba(255,255,255,0.8) !important; }
-    .register-btn { background: #FFB800 !important; color: #0A0F2E !important; font-weight: 700 !important; border-radius: 6px !important; }
+    .register-btn { background: #C9A66B !important; color: #1B2A5C !important; font-weight: 700 !important; border-radius: 6px !important; }
 
     /* Notification Dropdown */
     .notif-header {

@@ -79,7 +79,7 @@ import { JetDto, EmptyLegDto, BookingDto, OperatorDashboardDto, CreateJetRequest
           </div>
 
           <div *ngIf="!isLoadingDash && dashboard?.recentBookings?.length" style="margin-top:24px">
-            <h3 style="color:#1a237e;margin-bottom:12px">Recent Bookings</h3>
+            <h3 style="color:#1B2A5C;margin-bottom:12px">Recent Bookings</h3>
             <div class="table-wrap">
               <table mat-table [dataSource]="dashboard!.recentBookings" class="full-table">
                 <ng-container matColumnDef="ref"><th mat-header-cell *matHeaderCellDef>Ref</th><td mat-cell *matCellDef="let b">{{b.bookingRef}}</td></ng-container>
@@ -279,7 +279,7 @@ import { JetDto, EmptyLegDto, BookingDto, OperatorDashboardDto, CreateJetRequest
                   <div class="detail-row total-row"><span class="detail-label">Total</span><span>₹{{selectedBooking.totalAmount | number:'1.0-0'}}</span></div>
                 </div>
                 <div *ngIf="selectedBooking.passengers?.length" style="margin-top:16px">
-                  <h4 style="color:#1a237e;margin-bottom:8px">Passengers</h4>
+                  <h4 style="color:#1B2A5C;margin-bottom:8px">Passengers</h4>
                   <table mat-table [dataSource]="selectedBooking.passengers" class="full-table">
                     <ng-container matColumnDef="name"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef="let p">{{p.firstName}} {{p.lastName}}</td></ng-container>
                     <ng-container matColumnDef="passport"><th mat-header-cell *matHeaderCellDef>Passport</th><td mat-cell *matCellDef="let p">{{p.passportNumber}}</td></ng-container>
@@ -452,13 +452,13 @@ import { JetDto, EmptyLegDto, BookingDto, OperatorDashboardDto, CreateJetRequest
   styles: [`
     .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-bottom: 24px; }
     .stat-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; }
-    .stat-value { font-size: 26px; font-weight: 700; color: #1a237e; }
+    .stat-value { font-size: 26px; font-weight: 700; color: #1B2A5C; }
     .stat-label { font-size: 12px; color: #666; margin-top: 4px; }
-    .stat-icon { color: #1a237e; opacity: 0.25; font-size: 32px; width: 32px; height: 32px; display: block; margin: 0 auto 8px; }
+    .stat-icon { color: #1B2A5C; opacity: 0.25; font-size: 32px; width: 32px; height: 32px; display: block; margin: 0 auto 8px; }
     .table-wrap { overflow-x: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); background: white; }
     .full-table { width: 100%; }
     .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-    .page-title { font-size: 22px; font-weight: 700; color: #1a237e; margin-bottom: 16px; }
+    .page-title { font-size: 22px; font-weight: 700; color: #1B2A5C; margin-bottom: 16px; }
     .dialog-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 16px; overflow-y: auto; }
     .dialog-card { max-width: 620px; width: 100%; max-height: 92vh; overflow-y: auto; border-radius: 12px !important; }
     .jet-form { padding: 8px 0; }
@@ -471,13 +471,13 @@ import { JetDto, EmptyLegDto, BookingDto, OperatorDashboardDto, CreateJetRequest
     .confirm-approval { color: #0d47a1; background: #bbdefb; }
     .empty-state { padding: 40px; text-align: center; color: #999; font-size: 14px; }
     /* Booking detail panel */
-    .booking-detail-panel { background: white; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); padding: 24px; margin-top: 24px; border-left: 4px solid #1a237e; }
+    .booking-detail-panel { background: white; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); padding: 24px; margin-top: 24px; border-left: 4px solid #1B2A5C; }
     .detail-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-    .detail-header h3 { font-size: 16px; font-weight: 700; color: #1a237e; }
+    .detail-header h3 { font-size: 16px; font-weight: 700; color: #1B2A5C; }
     .detail-grid { display: grid; gap: 8px; }
     .detail-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
     .detail-label { font-weight: 600; color: #555; }
-    .total-row { font-weight: 700; font-size: 16px; color: #1a237e; border-bottom: none; padding-top: 12px; border-top: 2px solid #e0e0e0; }
+    .total-row { font-weight: 700; font-size: 16px; color: #1B2A5C; border-bottom: none; padding-top: 12px; border-top: 2px solid #e0e0e0; }
     mat-form-field { width: 100%; margin-bottom: 4px; }
   `]
 })

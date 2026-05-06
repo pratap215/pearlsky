@@ -101,14 +101,14 @@ function passwordMatchValidator(control: AbstractControl): ValidationErrors | nu
     .register-page { min-height: calc(100vh - 64px); display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #f5f7fa 0%, #e8eaf6 100%); padding: 24px; }
     .register-card { width: 100%; max-width: 500px; border-radius: 16px !important; box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important; }
     .logo-area { text-align: center; width: 100%; padding: 24px 0 16px; }
-    .logo-icon { font-size: 48px; width: 48px; height: 48px; color: #1a237e; }
-    .logo-area h2 { font-size: 22px; font-weight: 700; color: #1a237e; margin: 8px 0 4px; }
+    .logo-icon { font-size: 48px; width: 48px; height: 48px; color: #1B2A5C; }
+    .logo-area h2 { font-size: 22px; font-weight: 700; color: #1B2A5C; margin: 8px 0 4px; }
     .logo-area p { color: #666; font-size: 14px; }
     .full-width { width: 100%; margin-bottom: 8px; }
     .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 8px; }
     .submit-btn { width: 100%; height: 48px; font-size: 16px; font-weight: 600; margin-top: 8px; }
     .login-link { text-align: center; margin-top: 16px; font-size: 14px; color: #666; }
-    .login-link a { color: #1a237e; font-weight: 600; text-decoration: none; }
+    .login-link a { color: #1B2A5C; font-weight: 600; text-decoration: none; }
   `]
 })
 export class RegisterComponent {

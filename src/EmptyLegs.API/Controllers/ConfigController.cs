@@ -20,7 +20,7 @@ public class ConfigController : ControllerBase
         return Ok(new
         {
             paymentMode = _config["Payment:Mode"] ?? "Gateway",
-            appName = "JetFlux",
+            appName = "PearlSky",
             appVersion = "1.0.0"
         });
     }

@@ -16,9 +16,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // ─── JWT Authentication ───────────────────────────────────────────────────────
 var jwtSecret = builder.Configuration["Jwt:Secret"]
-    ?? "JetFluxS3cur3K3y!2024SuperSecretKeyForJWTTokenGeneration";
-var jwtIssuer = builder.Configuration["Jwt:Issuer"] ?? "JetFlux";
-var jwtAudience = builder.Configuration["Jwt:Audience"] ?? "JetFluxApp";
+    ?? "PearlSkyS3cur3K3y!2024SuperSecretKeyForJWTTokenGeneration";
+var jwtIssuer = builder.Configuration["Jwt:Issuer"] ?? "PearlSky";
+var jwtAudience = builder.Configuration["Jwt:Audience"] ?? "PearlSkyApp";
 
 builder.Services.AddAuthentication(options =>
 {
@@ -167,7 +167,7 @@ if (Directory.Exists(spaPath))
 else
 {
     // wwwroot/browser not found (dev mode - Angular served separately on :4200)
-    app.MapGet("/", () => "JetFlux API is running. Frontend served by Angular dev server on :4200");
+    app.MapGet("/", () => "PearlSky API is running. Frontend served by Angular dev server on :4200");
 }
 
 app.Run();
